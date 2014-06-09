@@ -1,0 +1,6 @@
+C:\Pasamonte\autoservicio\Compartido\Windows\Pasamonte.ApiClient.Core\bin\Debug\Pasamonte.ApiClient.Core.dll
+C:\Pasamonte\autoservicio\Compartido\Windows\Pasamonte.ApiClient.Core\bin\Debug\Pasamonte.ApiClient.Core.pdb
+C:\Pasamonte\autoservicio\Compartido\Windows\Pasamonte.ApiClient.Core\obj\Debug\Pasamonte.ApiClient.Core.dll
+C:\Pasamonte\autoservicio\Compartido\Windows\Pasamonte.ApiClient.Core\obj\Debug\Pasamonte.ApiClient.Core.pdb
+C:\Pasamonte\autoservicio\Compartido\Windows\Pasamonte.ApiClient.Core\bin\Debug\Pasamonte.ApiClient.Core.XML
+C:\Pasamonte\autoservicio\Compartido\Windows\Pasamonte.ApiClient.Core\obj\Debug\Pasamonte.ApiClient.Core.csprojResolveAssemblyReference.cache
