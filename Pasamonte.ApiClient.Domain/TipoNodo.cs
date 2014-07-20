@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+//using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -18,7 +18,7 @@ namespace Pasamonte.ApiClient.Domain
         /// <summary>
         /// Post identity
         /// </summary>
-        [Key]
+        //[Key]
         [DataMember]
         //[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         //public int Id { get; set; }
@@ -30,23 +30,23 @@ namespace Pasamonte.ApiClient.Domain
         /// <summary>
         /// NodoPadre
         /// </summary>
-        [ForeignKey("IdPadre")]
+        //[ForeignKey("IdPadre")]
         [DataMember]
         public TipoNodo TipoNodoPadre { get; set; }
 
         /// <summary>
         /// Titulo
         /// </summary>
-        [Required]
-        [StringLength(200)]
+        //[Required]
+        //[StringLength(200)]
         [DataMember]
         public string Titulo { get; set; }
 
         /// <summary>
         /// Descripcion for this article
         /// </summary>
-        [Required]
-        [StringLength(500)]
+        //[Required]
+        //[StringLength(500)]
         [DataMember]
         public string Descripcion { get; set; }
 

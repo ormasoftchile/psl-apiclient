@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+//using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -18,7 +18,7 @@ namespace Pasamonte.ApiClient.Domain
         /// <summary>
         /// Post identity
         /// </summary>
-        [Key]
+        //[Key]
         [DataMember]
         public Guid Id { get; set; }
 
@@ -31,32 +31,32 @@ namespace Pasamonte.ApiClient.Domain
         /// <summary>
         /// TipoNodo
         /// </summary>
-        [ForeignKey("IdTipoNodo")]
+        //[ForeignKey("IdTipoNodo")]
         [DataMember]
         public TipoNodo TipoNodo { get; set; }
 
         /// <summary>
         /// Titulo
         /// </summary>
-        [Required]
-        [StringLength(200)]
+        //[Required]
+        //[StringLength(200)]
         [DataMember]
         public string Titulo { get; set; }
 
         /// <summary>
         /// Descripcion for this article
         /// </summary>
-        [Required]
-        [StringLength(500)]
+        //[Required]
+        //[StringLength(500)]
         [DataMember]
         public string Descripcion { get; set; }
 
         /// <summary>
         /// Url for the image representing the post
         /// </summary>
-        [Required]
-        [StringLength(500)]
-        [DataType(DataType.ImageUrl)]
+        //[Required]
+        //[StringLength(500)]
+        //[DataType(DataType.ImageUrl)]
         [DataMember]
         public string UrlImagen { get; set; }
 
@@ -64,7 +64,7 @@ namespace Pasamonte.ApiClient.Domain
         /// If the article is published and visible to others or not
         /// </summary>
         [DataMember]
-        [Required]
+        //[Required]
         public bool Publico { get; set; }
 
         /// <summary>
@@ -82,7 +82,7 @@ namespace Pasamonte.ApiClient.Domain
         /// <summary>
         /// NodoPadre
         /// </summary>
-        [ForeignKey("IdNodoPadre")]
+        //[ForeignKey("IdNodoPadre")]
         [DataMember]
         public Nodo NodoPadre { get; set; }
 
@@ -90,7 +90,7 @@ namespace Pasamonte.ApiClient.Domain
         /// CodigoPublico - codigo oficial del nodo
         /// </summary>
         [DataMember]
-        [MaxLength(256)]
+        //[MaxLength(256)]
         public string CodigoPublico { get; set; }
     }
 

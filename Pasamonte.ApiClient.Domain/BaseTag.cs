@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+//using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -15,15 +15,15 @@ namespace Pasamonte.ApiClient.Domain
     [DataContract(IsReference = true)]
     public class BaseTag<T>
     {
-        [Key]
+        //[Key]
         [DataMember]
         public Guid TagId { get; set; }
 
         /// <summary>
         /// Tag Name
         /// </summary>
-        [Required]
-        [StringLength(100)]
+        //[Required]
+        //[StringLength(100)]
         [DataMember]
         public string Name { get; set; }
 
@@ -37,7 +37,7 @@ namespace Pasamonte.ApiClient.Domain
         /// <summary>
         /// Related Object
         /// </summary>
-        [ForeignKey("ObjectId")]
+        //[ForeignKey("ObjectId")]
         [DataMember]
         public T Object { get; set; }
     }

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -13,44 +13,44 @@ namespace Pasamonte.ApiClient.Domain
         /// <summary>
         /// Post identity
         /// </summary>
-        [Key]
+        //[Key]
         [DataMember]
         public Guid Id { get; set; }
 
         /// <summary>
         /// RazonSocial
         /// </summary>
-        [Required]
-        [StringLength(200)]
+        //[Required]
+        //[StringLength(200)]
         [DataMember]
         public string RazonSocial { get; set; }
 
         /// <summary>
         /// RUT Cliente
         /// </summary>
-        [Required]
-        [StringLength(100)]
+        //[Required]
+        //[StringLength(100)]
         [DataMember]
         public string RUT { get; set; }
 
         /// <summary>
         /// Activo
         /// </summary>
-        [Required]
+        //[Required]
         [DataMember]
         public bool Activo { get; set; }
 
         /// <summary>
         /// Bloqueado
         /// </summary>
-        [Required]
+        //[Required]
         [DataMember]
         public bool Bloqueado { get; set; }
 
         /// <summary>
         /// Fecha ingreso
         /// </summary>
-        [Required]
+        //[Required]
         [DataMember]
         public DateTime FechaIngreso { get; set; }
 
@@ -61,7 +61,7 @@ namespace Pasamonte.ApiClient.Domain
         public ICollection<ClienteTag> ClienteTags { get; set; }
 
         [DataMember]
-        [MaxLength(256)]
+        //[MaxLength(256)]
         public string ApiKey { get; set; }
     }
 

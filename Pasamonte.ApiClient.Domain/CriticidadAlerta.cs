@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Runtime.Serialization;
-using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations;
 
 namespace Pasamonte.ApiClient.Domain
 {
@@ -14,31 +14,31 @@ namespace Pasamonte.ApiClient.Domain
 		/// <summary>
 		/// Post identity
 		/// </summary>
-		[Key]
+		//[Key]
 		[DataMember]
 		public Guid Id { get; set; }
 
 		/// <summary>
 		/// Titulo
 		/// </summary>
-		[EnumDataType (typeof(CodigoCriticidadAlerta))]
-		[Required]
+		//[EnumDataType (typeof(CodigoCriticidadAlerta))]
+		//[Required]
 		[DataMember]
 		public CodigoCriticidadAlerta Codigo { get; set; }
 
 		/// <summary>
 		/// Titulo
 		/// </summary>
-		[Required]
-		[StringLength (200)]
+		//[Required]
+		//[StringLength (200)]
 		[DataMember]        
 		public string Titulo { get; set; }
 
 		/// <summary>
 		/// Descripcion
 		/// </summary>
-		[Required]
-		[StringLength (500)]
+		//[Required]
+		//[StringLength (500)]
 		[DataMember]
 		public string Descripcion { get; set; }
 	}

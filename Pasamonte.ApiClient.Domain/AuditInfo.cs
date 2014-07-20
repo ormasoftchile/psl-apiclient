@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+//using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
@@ -18,7 +18,7 @@ namespace Pasamonte.ApiClient.Domain
         /// ConcurrencyCheck
         /// </summary>        
         [DataMember]
-        [ConcurrencyCheck]
+        //[ConcurrencyCheck]
         public int RowVersion { get; internal set; }
     }
 
