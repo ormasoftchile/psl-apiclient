@@ -11,8 +11,8 @@ namespace Pasamonte.ApiClient.Foo
     {
         static void Main(string[] args)
         {
-            //var url = "http://54.191.151.49";
-            var url = "http://localhost:22658/";
+            var url = "http://54.191.151.49";
+            //var url = "http://localhost:22658/";
             var query = string.Empty;
             //query = @"$filter=Id eq (guid'08bb5553-6747-45d1-a2bb-db5872c4c3fb')";
             var apiClient = new ApiClient();
