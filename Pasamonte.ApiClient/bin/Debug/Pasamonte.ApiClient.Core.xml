@@ -44,7 +44,8 @@
             IdEnSistemaExterno - Id en el sistema remoto.
             </summary>
             Las entregas son recibidas desde un sistema externo.
-            Este id representa la identificacion unica de la entrega en el sistema externo.</member>
+            Este id representa la identificacion unica de la entrega en el sistema externo.
+        </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.TipoEntrega">
             <summary>
             TipoEntrega - o tipo de receta según la codificación del proveedor de RCE.
@@ -63,7 +64,7 @@
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.PersonaId">
             <summary>
             Related Object Id
-            </summary>
+            </summary>        
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.FechaHoraDispensacion">
             <summary>
@@ -78,7 +79,7 @@
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.TerminalId">
             <summary>
             Related Object Id
-            </summary>
+            </summary>        
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.NodoId">
             <summary>
@@ -96,19 +97,20 @@
             Está compuesto de la siguiente manera:
             xxxxxxxx.yyyyyy.[z]
             -------- ------ ---
-            |        |    |
-            |        |    |
+                |        |    |
+                |        |    |
             Identificador \    \
             de la empresa  \    \
             Ej. Saydex      \    ------------- Versión del software. Ej. 1.0.0.1a
-            Identificador del software. Ej. Rayen
+                            Identificador del software. Ej. Rayen
             </summary>
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal.Codigo">
             <summary>
             Codigo - Código del terminal
             </summary>
-            Corresponde a código configurado para cada terminal  en su archivo de configuración.</member>
+            Corresponde a código configurado para cada terminal  en su archivo de configuración.
+        </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal.CodigoEstablecimiento">
             <summary>
             CodigoEstablecimiento - código del establecimiento en el que se ubica físicamente el equipo desde el
@@ -124,6 +126,11 @@
         <member name="T:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario">
             <summary>
             IdentificacionUsuario - datos de identificación de un usuario.
+            </summary>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario.Reset">
+            <summary>
+            Reset - limpia la información dejándola en defaults.
             </summary>
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario.Tipo">
@@ -146,11 +153,6 @@
             Clave - clave del usuario
             </summary>
         </member>
-        <member name="M:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario.Reset">
-            <summary>
-            Reset - limpia la información dejándola en defaults.
-            </summary>
-        </member>
         <member name="T:Pasamonte.ApiClient.Core.Dto.ItemEntrega">
             <summary>
             Representa un nodo de la red
@@ -166,7 +168,8 @@
             IdEnSistemaExterno - Id en el sistema remoto.
             </summary>
             Las entregas y sus items son recibidas desde un sistema externo.
-            Este id representa la identificacion unica del item de la entrega en el sistema externo.</member>
+            Este id representa la identificacion unica del item de la entrega en el sistema externo.
+        </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.CantidadEntregar">
             <summary>
             CantidadEntregar - cantidad en unidades a entregar del producto.
@@ -185,7 +188,7 @@
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.EntregaId">
             <summary>
             Related Object Id
-            </summary>
+            </summary>        
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.IdentificadorProducto">
             <summary>
@@ -247,14 +250,16 @@
             TipoIdentificacionPaciente
             </summary>
             Especifica cómo se identifica a un paciente, ya sea con su RUN, el RUN de la persona responsable o bien
-            con el número de pasaporte.</member>
+            con el número de pasaporte.
+        </member>
         <member name="T:Pasamonte.ApiClient.Core.IApiClient">
             <summary>
             ApiClient - define las operaciones que se pueden realizar como
             cliente de la api de integración de Pasamonte.
             </summary>
             Toda llamada debe incorporar la url de destino del server Pasamonte
-            a utilizar y la clave de integración (apiKey).</member>
+            a utilizar y la clave de integración (apiKey).
+        </member>
         <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceAutenticar(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
             Autenticar - valida la identidad del usuario final en el sistema
@@ -265,7 +270,7 @@
             <param name="identificacionUsuario">Identificación del usuario final.</param>
             <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-            <returns>Objeto con datos de respuesta <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaValidarIdentificacion" /></returns>
+            <returns>Objeto con datos de respuesta <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaValidarIdentificacion"/></returns>
         </member>
         <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceObtenerEntregas(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
@@ -277,7 +282,7 @@
             <param name="identificacionUsuario">Identificación del usuario final.</param>
             <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-            <returns>Objeto con datos de las entregas <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas" /></returns>
+            <returns>Objeto con datos de las entregas <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas"/></returns>
         </member>
         <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceNotificarEntrega(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto,Pasamonte.ApiClient.Core.Dto.Entrega)">
             <summary>
@@ -289,8 +294,8 @@
             <param name="identificacionUsuario">Identificación del usuario final.</param>
             <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-            <param name="entrega">Objeto que describe la entrega realizada <see cref="T:Pasamonte.ApiClient.Core.Dto.Entrega" /></param>
-            <returns>Objeto con status de la operación <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaNotificarEntrega" /></returns>
+            <param name="entrega">Objeto que describe la entrega realizada <see cref="T:Pasamonte.ApiClient.Core.Dto.Entrega"/></param>
+            <returns>Objeto con status de la operación <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaNotificarEntrega"/></returns>
         </member>
         <member name="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas">
             <summary>
