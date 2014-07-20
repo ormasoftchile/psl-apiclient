@@ -1,2 +1,7 @@
 bin/Debug
 *.suo
+*.dll
+*.dll
+ApiClient.Tests/bin/Debug/ApiClient.Tests.dll
+*.suo
+*.pdb
