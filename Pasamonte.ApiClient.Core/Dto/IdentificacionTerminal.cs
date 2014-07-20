@@ -21,5 +21,11 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// cual el paciente está accediendo a los servicios.
         /// </summary>
         public string CodigoEstablecimiento { get; set; }
+
+        /// <summary>
+        /// CodigoTipoTerminal - utilizado para definir que tipo de terminal realiza
+        /// una operacion.
+        /// </summary>
+        public CodigoTipoTerminal CodigoTipoTerminal { get; set; }
     }
 }

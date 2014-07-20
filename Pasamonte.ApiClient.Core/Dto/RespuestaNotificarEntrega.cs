@@ -10,7 +10,7 @@ namespace Pasamonte.ApiClient.Core.Dto
     public class RespuestaNotificarEntrega
     {
         public StatusLlamada Status { get; set; }
-        public string DescripcionRespuesta { get; set; }
+        public string Descripcion { get; set; }
         public string FechaProximaEntrega { get; set; }
     }
     #endregion

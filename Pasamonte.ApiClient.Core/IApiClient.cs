@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pasamonte.ApiClient.Core.Dto;
+using Pasamonte.ApiClient.Domain;
 
 namespace Pasamonte.ApiClient.Core
 {
@@ -15,6 +16,7 @@ namespace Pasamonte.ApiClient.Core
     /// a utilizar y la clave de integración (apiKey).
     public interface IApiClient
     {
+        #region RceAutenticar
         /// <summary>
         /// Autenticar - valida la identidad del usuario final en el sistema
         /// remoto.
@@ -25,7 +27,7 @@ namespace Pasamonte.ApiClient.Core
         /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
         /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
         /// <returns>Objeto con datos de respuesta <see cref="RespuestaValidarIdentificacion"/></returns>
-        Task<RespuestaValidarIdentificacion> Autenticar
+        Task<RespuestaValidarIdentificacion> RceAutenticar
             (
                 string url,
                 string apiKey,
@@ -33,6 +35,8 @@ namespace Pasamonte.ApiClient.Core
                 IdentificacionTerminal identificacionTerminal,
                 IdentificacionSistemaRemoto identificacionSistemaRemoto
             );
+        #endregion
+        #region RceObtenerEntregas
         /// <summary>
         /// ObtenerEntregas - obtiene las entregas pendientes de medicamentos para
         /// un paciente.
@@ -43,7 +47,7 @@ namespace Pasamonte.ApiClient.Core
         /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
         /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
         /// <returns>Objeto con datos de las entregas <see cref="RespuestaObtenerEntregas"/></returns>
-        Task<RespuestaObtenerEntregas> ObtenerEntregas
+        Task<RespuestaObtenerEntregas> RceObtenerEntregas
             (
                 string url,
                 string apiKey,
@@ -51,6 +55,8 @@ namespace Pasamonte.ApiClient.Core
                 IdentificacionTerminal identificacionTerminal,
                 IdentificacionSistemaRemoto identificacionSistemaRemoto
             );
+        #endregion
+        #region RceNotificarEntrega
         /// <summary>
         /// NotificarEntrega - notifica al sistema remoto sobre la ocurrencia
         /// de una entrega de medicamentos a un usuario final.
@@ -62,7 +68,7 @@ namespace Pasamonte.ApiClient.Core
         /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
         /// <param name="entrega">Objeto que describe la entrega realizada <see cref="Entrega"/></param>
         /// <returns>Objeto con status de la operación <see cref="RespuestaNotificarEntrega"/></returns>
-        Task<RespuestaNotificarEntrega> NotificarEntrega
+        Task<RespuestaNotificarEntrega> RceNotificarEntrega
             (
                 string url,
                 string apiKey,
@@ -71,5 +77,36 @@ namespace Pasamonte.ApiClient.Core
                 IdentificacionSistemaRemoto identificacionSistemaRemoto,
                 Entrega entrega
             );
+        #endregion
+        #region RceObtenerCitas
+        #endregion
+        #region RceConfirmarCita
+        #endregion
+        #region RceCambiarClave
+        #endregion
+        #region PostCita
+        #endregion
+        #region PutCita
+        #endregion
+        #region PatchCita
+        #endregion
+        #region DeleteCita
+        #endregion
+        #region PslGetClientes
+        Task<RespuestaApi<IEnumerable<Cliente>>> PslGetClientes
+            (
+                string url,
+                string apiKey,
+                string query = null
+            );
+        #endregion
+        #region PslGetNodos
+        Task<RespuestaApi<IEnumerable<Nodo>>> PslGetNodos
+            (
+                string url,
+                string apiKey,
+                string query = null
+            );
+        #endregion
     }
 }

@@ -117,6 +117,12 @@
             cual el paciente está accediendo a los servicios.
             </summary>
         </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal.CodigoTipoTerminal">
+            <summary>
+            CodigoTipoTerminal - utilizado para definir que tipo de terminal realiza
+            una operacion.
+            </summary>
+        </member>
         <member name="T:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario">
             <summary>
             IdentificacionUsuario - datos de identificación de un usuario.
@@ -254,7 +260,7 @@
             Toda llamada debe incorporar la url de destino del server Pasamonte
             a utilizar y la clave de integración (apiKey).
         </member>
-        <member name="M:Pasamonte.ApiClient.Core.IApiClient.Autenticar(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceAutenticar(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
             Autenticar - valida la identidad del usuario final en el sistema
             remoto.
@@ -266,7 +272,7 @@
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
             <returns>Objeto con datos de respuesta <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaValidarIdentificacion"/></returns>
         </member>
-        <member name="M:Pasamonte.ApiClient.Core.IApiClient.ObtenerEntregas(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceObtenerEntregas(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
             ObtenerEntregas - obtiene las entregas pendientes de medicamentos para
             un paciente.
@@ -278,7 +284,7 @@
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
             <returns>Objeto con datos de las entregas <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas"/></returns>
         </member>
-        <member name="M:Pasamonte.ApiClient.Core.IApiClient.NotificarEntrega(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto,Pasamonte.ApiClient.Core.Dto.Entrega)">
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceNotificarEntrega(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto,Pasamonte.ApiClient.Core.Dto.Entrega)">
             <summary>
             NotificarEntrega - notifica al sistema remoto sobre la ocurrencia
             de una entrega de medicamentos a un usuario final.

@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4AC5AB5E-8DAD-495D-8CCA-BAE4ACDC895B}</ProjectGuid>
+    <ProjectGuid>{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pasamonte.ApiClient</RootNamespace>
-    <AssemblyName>Pasamonte.ApiClient</AssemblyName>
+    <RootNamespace>Pasamonte.ApiClient.Domain</RootNamespace>
+    <AssemblyName>Pasamonte.ApiClient.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -20,7 +20,6 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Pasamonte.ApiClient.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,7 +31,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,17 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApiClient.Autenticar.cs" />
-    <Compile Include="ApiClient.NotificarEntrega.cs" />
-    <Compile Include="ApiClient.ObtenerEntregas.cs" />
-    <Compile Include="ApiClient.cs" />
+    <Compile Include="AuditInfo.cs" />
+    <Compile Include="BaseTag.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Nodo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Pasamonte.ApiClient.Core\Pasamonte.ApiClient.Core.csproj">
-      <Project>{762c4de0-cbcf-4216-9e19-5021c3251545}</Project>
-      <Name>Pasamonte.ApiClient.Core</Name>
-    </ProjectReference>
+    <Compile Include="TipoNodo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -11,7 +11,7 @@
     <!-- AssemblyName, Name, and RootNamespace are not used by SHFB but Visual Studio adds them anyway -->
     <AssemblyName>Pasamonte.ApiClient.Docs</AssemblyName>
     <RootNamespace>Pasamonte.ApiClient.Docs</RootNamespace>
-    <Name>Pasamonte.ApiClient.Docs</Name>
+    <Name>ApiClient.Docs</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.5.1</FrameworkVersion>
     <OutputPath>.\Help\</OutputPath>
