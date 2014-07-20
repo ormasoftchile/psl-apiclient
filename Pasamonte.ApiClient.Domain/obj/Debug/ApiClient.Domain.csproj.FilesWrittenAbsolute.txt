@@ -1,0 +1,6 @@
+/Users/cormazab/Projects/psl-apiclient/Pasamonte.ApiClient.Domain/obj/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
+/Users/cormazab/Projects/psl-apiclient/Pasamonte.ApiClient.Domain/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/cormazab/Projects/psl-apiclient/Pasamonte.ApiClient.Domain/bin/Debug/Pasamonte.ApiClient.Domain.dll.mdb
+/Users/cormazab/Projects/psl-apiclient/Pasamonte.ApiClient.Domain/bin/Debug/Pasamonte.ApiClient.Domain.dll
+/Users/cormazab/Projects/psl-apiclient/Pasamonte.ApiClient.Domain/obj/Debug/Pasamonte.ApiClient.Domain.dll
+/Users/cormazab/Projects/psl-apiclient/Pasamonte.ApiClient.Domain/obj/Debug/Pasamonte.ApiClient.Domain.dll.mdb

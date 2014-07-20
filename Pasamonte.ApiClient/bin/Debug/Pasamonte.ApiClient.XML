@@ -13,51 +13,76 @@
             <summary>
             PslGetClientes
             </summary>
-            <param name="url"></param>
-            <param name="apiKey"></param>
-            <returns></returns>
+            <param name="url">
+            </param>
+            <param name="apiKey">
+            </param>
+            <returns>
+            </returns>
         </member>
         <member name="M:Pasamonte.ApiClient.ApiClient.PslGetNodos(System.String,System.String,System.String)">
             <summary>
             PslGetNodos
             </summary>
-            <param name="url"></param>
-            <param name="apiKey"></param>
-            <returns></returns>
+            <param name="url">
+            </param>
+            <param name="apiKey">
+            </param>
+            <returns>
+            </returns>
         </member>
         <member name="M:Pasamonte.ApiClient.ApiClient.RceAutenticar(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
             Autenticar
             </summary>
-            <param name="url"></param>
-            <param name="apiKey"></param>
-            <param name="identificacionUsuario"></param>
-            <param name="identificacionTerminal"></param>
-            <param name="identificacionSistemaRemoto"></param>
-            <returns></returns>
+            <param name="url">
+            </param>
+            <param name="apiKey">
+            </param>
+            <param name="identificacionUsuario">
+            </param>
+            <param name="identificacionTerminal">
+            </param>
+            <param name="identificacionSistemaRemoto">
+            </param>
+            <returns>
+            </returns>
         </member>
         <member name="M:Pasamonte.ApiClient.ApiClient.RceNotificarEntrega(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto,Pasamonte.ApiClient.Core.Dto.Entrega)">
             <summary>
             NotificarEntrega
             </summary>
-            <param name="url"></param>
-            <param name="apiKey"></param>
-            <param name="identificacionUsuario"></param>
-            <param name="identificacionTerminal"></param>
-            <param name="identificacionSistemaRemoto"></param>
-            <param name="entrega"></param>
-            <returns></returns>
+            <param name="url">
+            </param>
+            <param name="apiKey">
+            </param>
+            <param name="identificacionUsuario">
+            </param>
+            <param name="identificacionTerminal">
+            </param>
+            <param name="identificacionSistemaRemoto">
+            </param>
+            <param name="entrega">
+            </param>
+            <returns>
+            </returns>
         </member>
         <member name="M:Pasamonte.ApiClient.ApiClient.RceObtenerEntregas(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
             ObtenerEntregas
             </summary>
-            <param name="url"></param>
-            <param name="apiKey"></param>
-            <param name="identificacionUsuario"></param>
-            <param name="identificacionTerminal"></param>
-            <param name="identificacionSistemaRemoto"></param>
-            <returns></returns>
+            <param name="url">
+            </param>
+            <param name="apiKey">
+            </param>
+            <param name="identificacionUsuario">
+            </param>
+            <param name="identificacionTerminal">
+            </param>
+            <param name="identificacionSistemaRemoto">
+            </param>
+            <returns>
+            </returns>
         </member>
     </members>
 </doc>
