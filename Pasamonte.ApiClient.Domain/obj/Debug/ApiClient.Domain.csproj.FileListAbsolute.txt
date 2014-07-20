@@ -1,0 +1,5 @@
+C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Domain\bin\Debug\Pasamonte.ApiClient.Domain.dll
+C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Domain\bin\Debug\Pasamonte.ApiClient.Domain.pdb
+C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Domain\obj\Debug\ApiClient.Domain.csprojResolveAssemblyReference.cache
+C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Domain\obj\Debug\Pasamonte.ApiClient.Domain.dll
+C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Domain\obj\Debug\Pasamonte.ApiClient.Domain.pdb
