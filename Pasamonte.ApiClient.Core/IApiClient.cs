@@ -108,5 +108,13 @@ namespace Pasamonte.ApiClient.Core
                 string query = null
             );
         #endregion
+		#region PslGetCriticidadAlertas
+		Task<RespuestaApi<IEnumerable<CriticidadAlerta>>> PslGetCriticidadAlertas
+		(
+			string url,
+			string apiKey,
+			string query = null
+		);
+		#endregion
     }
 }

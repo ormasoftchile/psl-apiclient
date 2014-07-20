@@ -2,14 +2,21 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Pasamonte.ApiClient.Foo/Program.cs">
     <Files>
-      <File FileName="Pasamonte.ApiClient.Foo/Program.cs" Line="21" Column="22" />
+      <File FileName="Pasamonte.ApiClient.Foo/Program.cs" Line="25" Column="9" />
+      <File FileName="Pasamonte.ApiClient.Domain/CriticidadAlerta.cs" Line="26" Column="15" />
+      <File FileName="Pasamonte.ApiClient/ApiClient.Psl.cs" Line="63" Column="4" />
+      <File FileName="Pasamonte.ApiClient/ApiClient.cs" Line="24" Column="84" />
+      <File FileName="Pasamonte.ApiClient.Core/IApiClient.cs" Line="112" Column="49" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="Tests" expanded="True">
-            <Node name="Pasamonte.ApiClient.Foo" expanded="True" selected="True" />
+            <Node name="Pasamonte.ApiClient.Foo" expanded="True" />
           </Node>
+          <Node name="ApiClient" expanded="True" />
+          <Node name="ApiClient.Core" expanded="True" />
+          <Node name="ApiClient.Domain" expanded="True" />
         </State>
       </Pad>
     </Pads>

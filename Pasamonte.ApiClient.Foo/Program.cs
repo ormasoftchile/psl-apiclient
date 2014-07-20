@@ -16,11 +16,16 @@ namespace Pasamonte.ApiClient.Foo
             var query = string.Empty;
             //query = @"$filter=Id eq (guid'08bb5553-6747-45d1-a2bb-db5872c4c3fb')";
             var apiClient = new ApiClient();
-            var resultado = apiClient.PslGetNodos(
+            var resultadoNodos = apiClient.PslGetNodos(
                 url,
                 null,
                 query
             ).Result;
+			var resultadoCriticidadAlertas = apiClient.PslGetCriticidadAlertas(
+				url,
+				null,
+				query
+			).Result;
             Console.ReadKey();
             //var identificacionUsuario = new IdentificacionUsuario()
             //{
