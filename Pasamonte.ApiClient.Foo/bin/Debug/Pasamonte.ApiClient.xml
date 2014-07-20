@@ -31,6 +31,17 @@
             <returns>
             </returns>
         </member>
+        <member name="M:Pasamonte.ApiClient.ApiClient.PslGetCriticidadAlertas(System.String,System.String,System.String)">
+            <summary>
+            PslGetCriticidadAlertas
+            </summary>
+            <param name="url">
+            </param>
+            <param name="apiKey">
+            </param>
+            <returns>
+            </returns>
+        </member>
         <member name="M:Pasamonte.ApiClient.ApiClient.RceAutenticar(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
             Autenticar

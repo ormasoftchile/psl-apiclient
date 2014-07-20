@@ -48,5 +48,22 @@ namespace Pasamonte.ApiClient
             return await PslGet<IEnumerable<Nodo>>(url, apiKey, PslAccionGetNodos, query);
         }
         #endregion
+		#region PslGetCriticidadAlertas
+		/// <summary>
+		/// PslGetCriticidadAlertas
+		/// </summary>
+		/// <param name="url"></param>
+		/// <param name="apiKey"></param>
+		/// <returns></returns>
+		public async Task<RespuestaApi<IEnumerable<CriticidadAlerta>>> PslGetCriticidadAlertas
+		(
+			string url,
+			string apiKey,
+			string query = null
+		)
+		{
+			return await PslGet<IEnumerable<CriticidadAlerta>>(url, apiKey, PslAccionGetCriticidadAlertas, query);
+		}
+		#endregion
     }
 }

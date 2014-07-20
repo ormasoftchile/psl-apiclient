@@ -21,6 +21,7 @@ namespace Pasamonte.ApiClient
         const string PslBaseAccion = "breeze/breezeapi/";
         const string PslAccionGetClientes = PslBaseAccion + "clientes";
         const string PslAccionGetNodos = PslBaseAccion + "nodos";
+		const string PslAccionGetCriticidadAlertas = PslBaseAccion + "criticidadalertas";
 
         async Task<RespuestaApi<T>> PslGet<T>(
             string url,
