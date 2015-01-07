@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClient.Tests", "ApiClien
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient.Foo", "Pasamonte.ApiClient.Foo\Pasamonte.ApiClient.Foo.csproj", "{F928270F-84F4-438F-B66C-DABDEA82CD81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClient.Domain", "Pasamonte.ApiClient.Domain\ApiClient.Domain.csproj", "{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient", "Pasamonte.ApiClient\Pasamonte.ApiClient.csproj", "{0067EB46-86E3-487A-912C-FA1EB56D9128}"
 EndProject
 Global
@@ -33,10 +31,6 @@ Global
 		{F928270F-84F4-438F-B66C-DABDEA82CD81}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F928270F-84F4-438F-B66C-DABDEA82CD81}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F928270F-84F4-438F-B66C-DABDEA82CD81}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0067EB46-86E3-487A-912C-FA1EB56D9128}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0067EB46-86E3-487A-912C-FA1EB56D9128}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0067EB46-86E3-487A-912C-FA1EB56D9128}.Release|Any CPU.ActiveCfg = Release|Any CPU

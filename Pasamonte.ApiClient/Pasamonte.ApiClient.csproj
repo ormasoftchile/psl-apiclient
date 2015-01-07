@@ -54,7 +54,11 @@
     <Compile Include="ApiClient.AdmNotificar.cs" />
     <Compile Include="ApiClient.cs" />
     <Compile Include="ApiClient.RceAutenticar.cs" />
+    <Compile Include="ApiClient.RceConfirmarCita.cs" />
+    <Compile Include="ApiClient.RceCancelarCita.cs" />
+    <Compile Include="ApiClient.RceCambiarClave.cs" />
     <Compile Include="ApiClient.RceNotificarEntrega.cs" />
+    <Compile Include="ApiClient.RceObtenerCitas.cs" />
     <Compile Include="ApiClient.RceObtenerEntregas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -62,10 +66,6 @@
     <ProjectReference Include="..\Pasamonte.ApiClient.Core\ApiClient.Core.csproj">
       <Project>{762c4de0-cbcf-4216-9e19-5021c3251545}</Project>
       <Name>ApiClient.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Pasamonte.ApiClient.Domain\ApiClient.Domain.csproj">
-      <Project>{46f6dc1b-33f6-45cb-9390-a3ebfca4f3ca}</Project>
-      <Name>ApiClient.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

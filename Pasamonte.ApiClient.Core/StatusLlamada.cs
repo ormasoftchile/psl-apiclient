@@ -85,6 +85,9 @@ namespace Pasamonte.ApiClient.Core
         /// ErrorEstadoReceta - el estado de la receta no es válido o bien no es válido para realizar operaciones.
         /// </summary>
         ErrorEstadoReceta = 306,
+        /// <summary>
+        /// ErrorCitaNoExiste - la cita referida por el identificador no existe.
+        /// </summary>
         ErrorCitaNoExiste = 400
     }
     #endregion

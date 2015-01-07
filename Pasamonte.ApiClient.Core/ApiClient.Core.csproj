@@ -34,13 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -68,12 +65,6 @@
     <Compile Include="Dto\RespuestaObtenerEntregas.cs" />
     <Compile Include="StatusLlamada.cs" />
     <Compile Include="TipoIdentificacion.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Pasamonte.ApiClient.Domain\ApiClient.Domain.csproj">
-      <Project>{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}</Project>
-      <Name>ApiClient.Domain</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

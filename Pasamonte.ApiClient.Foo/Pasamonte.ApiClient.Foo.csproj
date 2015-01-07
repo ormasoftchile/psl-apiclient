@@ -59,9 +59,9 @@
       <Project>{762C4DE0-CBCF-4216-9E19-5021C3251545}</Project>
       <Name>ApiClient.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Pasamonte.ApiClient.Domain\ApiClient.Domain.csproj">
-      <Project>{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}</Project>
-      <Name>ApiClient.Domain</Name>
+    <ProjectReference Include="..\Pasamonte.ApiClient\Pasamonte.ApiClient.csproj">
+      <Project>{0067eb46-86e3-487a-912c-fa1eb56d9128}</Project>
+      <Name>Pasamonte.ApiClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

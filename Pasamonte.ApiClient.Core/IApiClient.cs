@@ -106,7 +106,7 @@ namespace Pasamonte.ApiClient.Core
         /// <param name="identificacionUsuario">Identificación del usuario final.</param>
         /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
         /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-        /// <param name="idCita">Cita</param>
+        /// <param name="idCita">Id de la Cita</param>
         Task<RespuestaConfirmarCita> RceConfirmarCita
             (
                 string url,
@@ -114,7 +114,7 @@ namespace Pasamonte.ApiClient.Core
                 IdentificacionUsuario identificacionUsuario,
                 IdentificacionTerminal identificacionTerminal,
                 IdentificacionSistemaRemoto identificacionSistemaRemoto,
-                Guid idCita
+                string idCita
             );
         #endregion
         #region RceCancelarCita
@@ -126,7 +126,7 @@ namespace Pasamonte.ApiClient.Core
         /// <param name="identificacionUsuario">Identificación del usuario final.</param>
         /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
         /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-        /// <param name="cita">Cita</param>
+        /// <param name="idCita">Id de la Cita</param>
         Task<RespuestaCancelarCita> RceCancelarCita
             (
                 string url,
@@ -134,7 +134,7 @@ namespace Pasamonte.ApiClient.Core
                 IdentificacionUsuario identificacionUsuario,
                 IdentificacionTerminal identificacionTerminal,
                 IdentificacionSistemaRemoto identificacionSistemaRemoto,
-                Cita cita
+                string idCita
             );
         #endregion
         #region RceCambiarClave

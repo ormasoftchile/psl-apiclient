@@ -17,6 +17,10 @@ namespace Pasamonte.ApiClient
         const string RceAccionAutenticar = RceBaseAccion + "autenticar";
         const string RceAccionObtenerEntregas = RceBaseAccion + "obtenerentregas";
         const string RceAccionNotificarEntrega = RceBaseAccion + "notificarentrega";
+        const string RceAccionCambiarClave = RceBaseAccion + "cambiarclave";
+        const string RceAccionCancelarCita = RceBaseAccion + "cancelarcita";
+        const string RceAccionConfirmarCita = RceBaseAccion + "confirmarcita";
+        const string RceAccionObtenerCitas = RceBaseAccion + "obtenercitas";
         const string AdmBaseAccion = "api/adm/";
         const string AdmAccionNotificar = AdmBaseAccion + "notificar";
 
@@ -25,27 +29,6 @@ namespace Pasamonte.ApiClient
         public ApiClient(ILog log)
         {
             this.log = log;
-        }
-
-
-        public Task<Core.Dto.RespuestaObtenerCitas> RceObtenerCitas(string url, string apiKey, Core.Dto.IdentificacionUsuario identificacionUsuario, Core.Dto.IdentificacionTerminal identificacionTerminal, Core.Dto.IdentificacionSistemaRemoto identificacionSistemaRemoto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Core.Dto.RespuestaConfirmarCita> RceConfirmarCita(string url, string apiKey, Core.Dto.IdentificacionUsuario identificacionUsuario, Core.Dto.IdentificacionTerminal identificacionTerminal, Core.Dto.IdentificacionSistemaRemoto identificacionSistemaRemoto, Guid idCita)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Core.Dto.RespuestaCancelarCita> RceCancelarCita(string url, string apiKey, Core.Dto.IdentificacionUsuario identificacionUsuario, Core.Dto.IdentificacionTerminal identificacionTerminal, Core.Dto.IdentificacionSistemaRemoto identificacionSistemaRemoto, Core.Dto.Cita cita)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Core.Dto.RespuestaCambiarClave> RceCambiarClave(string url, string apiKey, Core.Dto.IdentificacionUsuario identificacionUsuario, Core.Dto.IdentificacionTerminal identificacionTerminal, Core.Dto.IdentificacionSistemaRemoto identificacionSistemaRemoto, string nuevaClave)
-        {
-            throw new NotImplementedException();
         }
     }
 }
