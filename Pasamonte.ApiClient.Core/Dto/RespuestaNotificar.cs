@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Pasamonte.ApiClient.Core.Dto
 {
-    #region RespuestaNotificarEntregaDto
-    public class RespuestaNotificarEntrega
+    public class RespuestaNotificar
     {
         public StatusLlamada Status { get; set; }
         public string Descripcion { get; set; }
-        public DateTime? FechaProximaEntrega { get; set; }
     }
-    #endregion
 }

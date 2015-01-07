@@ -40,12 +40,14 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// </summary>        
         public Guid PersonaId { get; set; }
 
+        public Persona Persona { get; set; }
+
         public bool Despachada { get; set; }
 
         /// <summary>
         /// FechaHoraDispensacion - describe la hora de dispensación. Formato: yyyyMMdd hh:mm.
         /// </summary>
-        public string FechaHoraDispensacion { get; set; }
+        public DateTime? FechaHoraDispensacion { get; set; }
 
         /// <summary>
         /// UnidadDispensada - indica la unidad de dispensación del producto.
@@ -61,5 +63,17 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// Id del nodo de la entrega
         /// </summary>
         public Guid? NodoId { get; set; }
+
+        /// <summary>
+        /// Parcial - indica si el despacho realizado se hizo de manera parcial, es decir,
+        /// sin completar todos los items.
+        /// </summary>
+        public bool Parcial { get; set; }
+
+        /// <summary>
+        /// FechaProximoDespacho - para entregas notificadas, especifica la fecha de proximo
+        /// despacho entregada por el RCE.
+        /// </summary>
+        public DateTime? FechaProximoDespacho { get; set; }
     }
 }

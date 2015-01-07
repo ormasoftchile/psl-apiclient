@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pasamonte.ApiClient.Core.Dto;
-using Pasamonte.ApiClient.Domain;
 
 namespace Pasamonte.ApiClient.Core
 {
@@ -79,42 +78,94 @@ namespace Pasamonte.ApiClient.Core
             );
         #endregion
         #region RceObtenerCitas
+        /// <summary>
+        /// ObtenerCitas - obtiene las citas pendientes para un paciente o un nodo asociado
+        /// a un terminal.
+        /// </summary>
+        /// <param name="url">Url del servidor Pasamonte.</param>
+        /// <param name="apiKey">Clave de integración.</param>
+        /// <param name="identificacionUsuario">Identificación del usuario final.</param>
+        /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
+        /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
+        /// <returns>Objeto con datos de las citas <see cref="RespuestaObtenerCitas"/></returns>
+        Task<RespuestaObtenerCitas> RceObtenerCitas
+            (
+                string url,
+                string apiKey,
+                IdentificacionUsuario identificacionUsuario,
+                IdentificacionTerminal identificacionTerminal,
+                IdentificacionSistemaRemoto identificacionSistemaRemoto
+            );
         #endregion
         #region RceConfirmarCita
+        /// <summary>
+        /// RceConfirmarCita - confirma la llegada a una cita de un paciente.
+        /// </summary>
+        /// <param name="url">Url del servidor Pasamonte.</param>
+        /// <param name="apiKey">Clave de integración.</param>
+        /// <param name="identificacionUsuario">Identificación del usuario final.</param>
+        /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
+        /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
+        /// <param name="idCita">Cita</param>
+        Task<RespuestaConfirmarCita> RceConfirmarCita
+            (
+                string url,
+                string apiKey,
+                IdentificacionUsuario identificacionUsuario,
+                IdentificacionTerminal identificacionTerminal,
+                IdentificacionSistemaRemoto identificacionSistemaRemoto,
+                Guid idCita
+            );
+        #endregion
+        #region RceCancelarCita
+        /// <summary>
+        /// RceCancelarCita - Cancela una cita de un paciente.
+        /// </summary>
+        /// <param name="url">Url del servidor Pasamonte.</param>
+        /// <param name="apiKey">Clave de integración.</param>
+        /// <param name="identificacionUsuario">Identificación del usuario final.</param>
+        /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
+        /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
+        /// <param name="cita">Cita</param>
+        Task<RespuestaCancelarCita> RceCancelarCita
+            (
+                string url,
+                string apiKey,
+                IdentificacionUsuario identificacionUsuario,
+                IdentificacionTerminal identificacionTerminal,
+                IdentificacionSistemaRemoto identificacionSistemaRemoto,
+                Cita cita
+            );
         #endregion
         #region RceCambiarClave
-        #endregion
-        #region PostCita
-        #endregion
-        #region PutCita
-        #endregion
-        #region PatchCita
-        #endregion
-        #region DeleteCita
-        #endregion
-        #region PslGetClientes
-        Task<RespuestaApi<IEnumerable<Cliente>>> PslGetClientes
+        /// <summary>
+        /// CambiarClave - cambia la clave del usuario final en el sistema
+        /// remoto.
+        /// </summary>
+        /// <param name="url">Url del servidor Pasamonte.</param>
+        /// <param name="apiKey">Clave de integración.</param>
+        /// <param name="identificacionUsuario">Identificación del usuario final.</param>
+        /// <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
+        /// <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
+        /// <param name="nuevaClave">Nueva clave del usuario.</param>
+        /// <returns>Objeto con datos de respuesta <see cref="RespuestaValidarIdentificacion"/></returns>
+        Task<RespuestaCambiarClave> RceCambiarClave
             (
                 string url,
                 string apiKey,
-                string query = null
+                IdentificacionUsuario identificacionUsuario,
+                IdentificacionTerminal identificacionTerminal,
+                IdentificacionSistemaRemoto identificacionSistemaRemoto,
+                string nuevaClave
             );
         #endregion
-        #region PslGetNodos
-        Task<RespuestaApi<IEnumerable<Nodo>>> PslGetNodos
+        #region AdmNotificar
+        Task<RespuestaNotificar> Notificar
             (
                 string url,
                 string apiKey,
-                string query = null
+                Notificacion notificacion
             );
         #endregion
-		#region PslGetCriticidadAlertas
-		Task<RespuestaApi<IEnumerable<CriticidadAlerta>>> PslGetCriticidadAlertas
-		(
-			string url,
-			string apiKey,
-			string query = null
-		);
-		#endregion
     }
 }

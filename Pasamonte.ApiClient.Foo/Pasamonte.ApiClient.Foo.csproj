@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -49,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pasamonte.ApiClient.Core\ApiClient.Core.csproj">
@@ -58,10 +62,6 @@
     <ProjectReference Include="..\Pasamonte.ApiClient.Domain\ApiClient.Domain.csproj">
       <Project>{46F6DC1B-33F6-45CB-9390-A3EBFCA4F3CA}</Project>
       <Name>ApiClient.Domain</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Pasamonte.ApiClient\ApiClient.csproj">
-      <Project>{4AC5AB5E-8DAD-495D-8CCA-BAE4ACDC895B}</Project>
-      <Name>ApiClient</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

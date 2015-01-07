@@ -28,6 +28,16 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// CantidadEntregar - cantidad en unidades a entregar del producto.
         /// </summary>
         public int CantidadEntregar { get; set; }
+        
+        /// <summary>
+        /// CantidadEntregada - cantidad en unidades entregadas del producto.
+        /// </summary>
+        public int CantidadEntregada { get; set; }
+
+        /// <summary>
+        /// StockRCE - stock restante del articulo en el RCE.
+        /// </summary>
+        public int StockRCE { get; set; }
 
         /// <summary>
         /// DescripcionEntrega - glosa descriptiva

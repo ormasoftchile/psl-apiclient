@@ -33,7 +33,7 @@ namespace Pasamonte.ApiClient
         {
             var respuesta = new RespuestaValidarIdentificacion()
             {
-
+                
             };
             using (var client = new HttpClient())
             {
@@ -50,19 +50,21 @@ namespace Pasamonte.ApiClient
                         identificacionSistemaRemoto = identificacionSistemaRemoto
                     };
                 var response =
-                    client.PostAsJsonAsync
+                    await client.PostAsJsonAsync
                     (
                         RceAccionAutenticar,
                         requestData
-                    ).Result;
+                    );
                 if (response.IsSuccessStatusCode)
                 {
                     // Get the URI of the created resource.
                     respuesta = await response.Content.ReadAsAsync<RespuestaValidarIdentificacion>();
+                    log.DebugFormat("-> RceAutenticar: ok. Terminal: {0}. Usuario: {1}", identificacionTerminal.CodigoEstablecimiento, identificacionUsuario.Identificador);
                 }
                 else
                 {
                     respuesta.Status = StatusLlamada.ErrorDesconocido;
+                    log.DebugFormat("-> RceAutenticar: ERROR. Terminal: {0}. Usuario: {1}", identificacionTerminal.CodigoEstablecimiento, identificacionUsuario.Identificador);
                 }
             }
             return respuesta;

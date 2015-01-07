@@ -27,7 +27,7 @@ namespace Pasamonte.ApiClient
                 string url,
                 string apiKey,
                 IdentificacionUsuario identificacionUsuario,
-                IdentificacionTerminal identificacionTerminal,
+                IdentificacionTerminal identificacionTerminal, 
                 IdentificacionSistemaRemoto identificacionSistemaRemoto,
                 Entrega entrega
             )
@@ -52,11 +52,11 @@ namespace Pasamonte.ApiClient
                         entrega = entrega
                     };
                 var response =
-                    client.PostAsJsonAsync
+                    await client.PostAsJsonAsync
                     (
                         RceAccionNotificarEntrega,
                         requestData
-                    ).Result;
+                    );
                 if (response.IsSuccessStatusCode)
                 {
                     respuesta = await response.Content.ReadAsAsync<RespuestaNotificarEntrega>();
