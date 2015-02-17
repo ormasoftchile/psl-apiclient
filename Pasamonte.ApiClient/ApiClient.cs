@@ -20,9 +20,19 @@ namespace Pasamonte.ApiClient
         const string RceAccionCambiarClave = RceBaseAccion + "cambiarclave";
         const string RceAccionCancelarCita = RceBaseAccion + "cancelarcita";
         const string RceAccionConfirmarCita = RceBaseAccion + "confirmarcita";
+        const string RceAccionRegistrarCita = RceBaseAccion + "registrarcita";
         const string RceAccionObtenerCitas = RceBaseAccion + "obtenercitas";
         const string AdmBaseAccion = "api/adm/";
         const string AdmAccionNotificar = AdmBaseAccion + "notificar";
+        const string AccionEliminarModulo = AdmBaseAccion + "eliminarmodulo";
+        const string AccionEliminarServicio = AdmBaseAccion + "eliminarservicio";
+        const string AccionEliminarTurno = AdmBaseAccion + "eliminarturno";
+        const string AccionRegistrarModulo = AdmBaseAccion + "registrarmodulo";
+        const string AccionRegistrarServicio = AdmBaseAccion + "registrarservicio";
+        const string AccionRegistrarTurno = AdmBaseAccion + "registrarturno";
+        const string AccionObtenerModulos = AdmBaseAccion + "obtenermodulos";
+        const string AccionObtenerServicios = AdmBaseAccion + "obtenerservicios";
+        const string AccionObtenerTurnos = AdmBaseAccion + "obtenerturnos";
 
         ILog log;
 

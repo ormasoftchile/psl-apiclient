@@ -7,32 +7,27 @@ using Pasamonte.ApiClient.Core.Dto;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Pasamonte.ApiClient.Core;
+using Newtonsoft.Json.Linq;
 
 namespace Pasamonte.ApiClient
 {
     public partial class ApiClient
     {
         /// <summary>
-        /// NotificarEntrega
+        /// RegistrarModulo
         /// </summary>
         /// <param name="url"></param>
         /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
-        /// <param name="entrega"></param>
-        /// <returns>RespuestaNotificarEntrega</returns>
-        public async Task<RespuestaNotificarEntrega> RceNotificarEntrega
+        /// <param name="modulo">Modulo a registrar</param>
+        /// <returns></returns>
+        public async Task<RespuestaRegistrarModulo> RegistrarModulo
             (
                 string url,
                 string apiKey,
-                IdentificacionUsuario identificacionUsuario,
-                IdentificacionTerminal identificacionTerminal, 
-                IdentificacionSistemaRemoto identificacionSistemaRemoto,
-                Entrega entrega
+                Modulo modulo
             )
         {
-            var respuesta = new RespuestaNotificarEntrega()
+            var respuesta = new RespuestaRegistrarModulo()
             {
 
             };
@@ -42,24 +37,19 @@ namespace Pasamonte.ApiClient
                 client.DefaultRequestHeaders.Accept.Clear();
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
+                var requestData = JObject.FromObject(modulo);
+                requestData["apiKey"] = apiKey;
+
                 // HTTP POST
-                var requestData =
-                    new
-                    {
-                        identificacionUsuario = identificacionUsuario,
-                        identificacionTerminal = identificacionTerminal,
-                        identificacionSistemaRemoto = identificacionSistemaRemoto,
-                        entrega = entrega
-                    };
                 var response =
                     await client.PostAsJsonAsync
                     (
-                        RceAccionNotificarEntrega,
+                        AccionRegistrarModulo,
                         requestData
                     );
                 if (response.IsSuccessStatusCode)
                 {
-                    respuesta = await response.Content.ReadAsAsync<RespuestaNotificarEntrega>();
+                    respuesta = await response.Content.ReadAsAsync<RespuestaRegistrarModulo>();
                 }
                 else
                 {

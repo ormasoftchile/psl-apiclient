@@ -13,26 +13,20 @@ namespace Pasamonte.ApiClient
     public partial class ApiClient
     {
         /// <summary>
-        /// NotificarEntrega
+        /// EliminarServicio
         /// </summary>
         /// <param name="url"></param>
         /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
-        /// <param name="entrega"></param>
-        /// <returns>RespuestaNotificarEntrega</returns>
-        public async Task<RespuestaNotificarEntrega> RceNotificarEntrega
+        /// <param name="idServicio"></param>
+        /// <returns></returns>
+        public async Task<RespuestaEliminarServicio> EliminarServicio
             (
                 string url,
                 string apiKey,
-                IdentificacionUsuario identificacionUsuario,
-                IdentificacionTerminal identificacionTerminal, 
-                IdentificacionSistemaRemoto identificacionSistemaRemoto,
-                Entrega entrega
+                string idServicio
             )
         {
-            var respuesta = new RespuestaNotificarEntrega()
+            var respuesta = new RespuestaEliminarServicio()
             {
 
             };
@@ -46,20 +40,18 @@ namespace Pasamonte.ApiClient
                 var requestData =
                     new
                     {
-                        identificacionUsuario = identificacionUsuario,
-                        identificacionTerminal = identificacionTerminal,
-                        identificacionSistemaRemoto = identificacionSistemaRemoto,
-                        entrega = entrega
+                        apiKey = apiKey,
+                        idServicio = idServicio
                     };
                 var response =
                     await client.PostAsJsonAsync
                     (
-                        RceAccionNotificarEntrega,
+                        AccionEliminarServicio,
                         requestData
                     );
                 if (response.IsSuccessStatusCode)
                 {
-                    respuesta = await response.Content.ReadAsAsync<RespuestaNotificarEntrega>();
+                    respuesta = await response.Content.ReadAsAsync<RespuestaEliminarServicio>();
                 }
                 else
                 {

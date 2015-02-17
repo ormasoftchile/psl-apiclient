@@ -7,6 +7,7 @@ using Pasamonte.ApiClient.Core.Dto;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Pasamonte.ApiClient.Core;
+using Newtonsoft.Json.Linq;
 
 namespace Pasamonte.ApiClient
 {
@@ -25,9 +26,7 @@ namespace Pasamonte.ApiClient
             (
                 string url,
                 string apiKey,
-                IdentificacionUsuario identificacionUsuario,
-                IdentificacionTerminal identificacionTerminal,
-                IdentificacionSistemaRemoto identificacionSistemaRemoto
+                QueryObtenerCitas query
             )
         {
             var respuesta = new RespuestaObtenerCitas()
@@ -41,13 +40,8 @@ namespace Pasamonte.ApiClient
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // HTTP POST
-                var requestData =
-                    new
-                    {
-                        identificacionUsuario = identificacionUsuario,
-                        identificacionTerminal = identificacionTerminal,
-                        identificacionSistemaRemoto = identificacionSistemaRemoto
-                    };
+                var requestData = JObject.FromObject(query);
+                requestData["apiKey"] = apiKey;
                 var response =
                     await client.PostAsJsonAsync
                     (
@@ -60,23 +54,10 @@ namespace Pasamonte.ApiClient
                     var r = await response.Content.ReadAsStringAsync();
                     respuesta =
                         await response.Content.ReadAsAsync<RespuestaObtenerCitas>();
-                    var b = new StringBuilder();
-                    if (respuesta.Citas != null)
-                        foreach (var cita in respuesta.Citas)
-                        {
-                            //b.AppendFormat("-- cita id: {0} tipo: {1}\r\n", cita..IdEnSistemaExterno, entrega.TipoEntrega);
-                            //if (entrega.ItemsEntrega != null)
-                            //    foreach (var item in entrega.ItemsEntrega)
-                            //    {
-                            //        b.AppendFormat("---- item id:\t{0}\tcantidad:\t{1}\tproducto:\t{2} desc:\t{3} stock rce:\t{4}\r\n", item.IdEnSistemaExterno, item.CantidadEntregar, item.IdentificadorProducto, item.DescripcionProducto, item.StockRCE);
-                            //    }
-                        }
-                    log.DebugFormat("-> RceObtenerEntregas: ok. Terminal: {0}. Usuario: {1}\r\n{2}", identificacionTerminal.CodigoEstablecimiento, identificacionUsuario.Identificador, b.ToString());
                 }
                 else
                 {
                     respuesta.Status = StatusLlamada.ErrorDesconocido;
-                    log.DebugFormat("-> RceObtenerEntregas: ERROR. Terminal: {0}. Usuario: {1}", identificacionTerminal.CodigoEstablecimiento, identificacionUsuario.Identificador);
                 }
             }
             return respuesta;

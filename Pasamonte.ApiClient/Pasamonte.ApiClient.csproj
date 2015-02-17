@@ -53,7 +53,17 @@
   <ItemGroup>
     <Compile Include="ApiClient.AdmNotificar.cs" />
     <Compile Include="ApiClient.cs" />
+    <Compile Include="ApiClient.EliminarModulo.cs" />
+    <Compile Include="ApiClient.EliminarTurno.cs" />
     <Compile Include="ApiClient.RceAutenticar.cs" />
+    <Compile Include="ApiClient.EliminarServicio.cs" />
+    <Compile Include="ApiClient.ObtenerServicios.cs" />
+    <Compile Include="ApiClient.ObtenerModulos.cs" />
+    <Compile Include="ApiClient.ObtenerTurnos.cs" />
+    <Compile Include="ApiClient.RegistrarServicio.cs" />
+    <Compile Include="ApiClient.RegistrarModulo.cs" />
+    <Compile Include="ApiClient.RegistrarTurno.cs" />
+    <Compile Include="ApiClient.RceRegistrarCita.cs" />
     <Compile Include="ApiClient.RceConfirmarCita.cs" />
     <Compile Include="ApiClient.RceCancelarCita.cs" />
     <Compile Include="ApiClient.RceCambiarClave.cs" />
@@ -72,6 +82,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)..\assemblies"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

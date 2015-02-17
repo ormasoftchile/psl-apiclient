@@ -17,18 +17,12 @@ namespace Pasamonte.ApiClient
         /// </summary>
         /// <param name="url"></param>
         /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
         /// <param name="idCita"></param>
         /// <returns></returns>
         public async Task<RespuestaCancelarCita> RceCancelarCita
             (
                 string url,
                 string apiKey,
-                IdentificacionUsuario identificacionUsuario,
-                IdentificacionTerminal identificacionTerminal, 
-                IdentificacionSistemaRemoto identificacionSistemaRemoto,
                 string idCita
             )
         {
@@ -46,9 +40,7 @@ namespace Pasamonte.ApiClient
                 var requestData =
                     new
                     {
-                        identificacionUsuario = identificacionUsuario,
-                        identificacionTerminal = identificacionTerminal,
-                        identificacionSistemaRemoto = identificacionSistemaRemoto,
+                        apiKey = apiKey,
                         idCita = idCita
                     };
                 var response =

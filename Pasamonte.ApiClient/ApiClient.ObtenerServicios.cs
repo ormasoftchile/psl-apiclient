@@ -7,32 +7,27 @@ using Pasamonte.ApiClient.Core.Dto;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using Pasamonte.ApiClient.Core;
+using Newtonsoft.Json.Linq;
 
 namespace Pasamonte.ApiClient
 {
     public partial class ApiClient
     {
         /// <summary>
-        /// NotificarEntrega
+        /// ObtenerServicios
         /// </summary>
         /// <param name="url"></param>
         /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
-        /// <param name="entrega"></param>
-        /// <returns>RespuestaNotificarEntrega</returns>
-        public async Task<RespuestaNotificarEntrega> RceNotificarEntrega
+        /// <param name="query"></param>
+        /// <returns>Objeto de respuesta</returns>
+        public async Task<RespuestaObtenerServicios> ObtenerServicios
             (
                 string url,
                 string apiKey,
-                IdentificacionUsuario identificacionUsuario,
-                IdentificacionTerminal identificacionTerminal, 
-                IdentificacionSistemaRemoto identificacionSistemaRemoto,
-                Entrega entrega
+                QueryObtenerServicios query
             )
         {
-            var respuesta = new RespuestaNotificarEntrega()
+            var respuesta = new RespuestaObtenerServicios()
             {
 
             };
@@ -43,23 +38,20 @@ namespace Pasamonte.ApiClient
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
                 // HTTP POST
-                var requestData =
-                    new
-                    {
-                        identificacionUsuario = identificacionUsuario,
-                        identificacionTerminal = identificacionTerminal,
-                        identificacionSistemaRemoto = identificacionSistemaRemoto,
-                        entrega = entrega
-                    };
+                var requestData = JObject.FromObject(query);
+                requestData["apiKey"] = apiKey;
                 var response =
                     await client.PostAsJsonAsync
                     (
-                        RceAccionNotificarEntrega,
+                        AccionObtenerServicios,
                         requestData
                     );
                 if (response.IsSuccessStatusCode)
                 {
-                    respuesta = await response.Content.ReadAsAsync<RespuestaNotificarEntrega>();
+                    // Get the URI of the created resource.
+                    var r = await response.Content.ReadAsStringAsync();
+                    respuesta =
+                        await response.Content.ReadAsAsync<RespuestaObtenerServicios>();
                 }
                 else
                 {

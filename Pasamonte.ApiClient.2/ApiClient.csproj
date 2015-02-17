@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiClient.AdmNotificar.cs" />
     <Compile Include="ApiClient.Psl.cs" />
     <Compile Include="ApiClient.RceAutenticar.cs" />
     <Compile Include="ApiClient.RceNotificarEntrega.cs" />

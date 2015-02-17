@@ -15,20 +15,14 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// ConfirmarCita
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
-        /// <param name="idCita"></param>
+        /// <param name="url">Url del servidor Web</param>
+        /// <param name="apiKey">apiKey del aplicativo</param>
+        /// <param name="idCita">identificador de la cita</param>
         /// <returns></returns>
         public async Task<RespuestaConfirmarCita> RceConfirmarCita
             (
                 string url,
                 string apiKey,
-                IdentificacionUsuario identificacionUsuario,
-                IdentificacionTerminal identificacionTerminal,
-                IdentificacionSistemaRemoto identificacionSistemaRemoto,
                 string idCita
             )
         {
@@ -46,9 +40,7 @@ namespace Pasamonte.ApiClient
                 var requestData =
                     new
                     {
-                        identificacionUsuario = identificacionUsuario,
-                        identificacionTerminal = identificacionTerminal,
-                        identificacionSistemaRemoto = identificacionSistemaRemoto,
+                        apiKey = apiKey,
                         idCita = idCita
                     };
                 var response =
