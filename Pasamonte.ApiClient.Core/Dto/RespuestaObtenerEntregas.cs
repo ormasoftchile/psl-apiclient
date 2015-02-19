@@ -10,16 +10,8 @@ namespace Pasamonte.ApiClient.Core.Dto
     /// <summary>
     /// RespuestaEntregas - describe la respuesta a la consulta ObtenerEntregas.
     /// </summary>
-    public class RespuestaObtenerEntregas
+    public class RespuestaObtenerEntregas: RespuestaApi
     {
-        /// <summary>
-        /// CodigoRespuesta - status de la llamada
-        /// </summary>
-        public StatusLlamada Status { get; set; }
-        /// <summary>
-        /// Descripcion - glosa descriptiva del status de la llamada.
-        /// </summary>
-        public string Descripcion { get; set; }
         /// <summary>
         /// Paciente - datos del paciente.
         /// </summary>

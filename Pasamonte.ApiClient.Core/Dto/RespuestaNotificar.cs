@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace Pasamonte.ApiClient.Core.Dto
 {
-    public class RespuestaNotificar
+    public class RespuestaNotificar: RespuestaApi
     {
-        public StatusLlamada Status { get; set; }
-        public string Descripcion { get; set; }
     }
 }

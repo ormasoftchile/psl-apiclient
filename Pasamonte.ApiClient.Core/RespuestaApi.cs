@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace Pasamonte.ApiClient.Core
 {
-    public class RespuestaApi<T>
+    public class RespuestaApi
     {
-        public T Contenido { get; private set; }
-        public StatusLlamada Status { get; private set; }
-        public RespuestaApi(StatusLlamada status, T contenido = default(T))
+        /// <summary>
+        /// CodigoRespuesta - status de la llamada
+        /// </summary>
+        public StatusLlamada Status { get; set; }
+        /// <summary>
+        /// Descripcion - glosa descriptiva del status de la llamada.
+        /// </summary>
+        public string Descripcion { get; set; }
+        public RespuestaApi(StatusLlamada status, string descripcion = null)
         {
             Status = status;
-            Contenido = contenido;
+            Descripcion = descripcion;
+        }
+        public RespuestaApi()
+        {
+
         }
     }
 }

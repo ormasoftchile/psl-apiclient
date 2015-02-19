@@ -13,12 +13,12 @@ namespace Pasamonte.ApiClient
     public partial class ApiClient
     {
         /// <summary>
-        /// CancelarCita
+        /// RceCancelarCita
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="idCita"></param>
-        /// <returns></returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="idCita">Identificador de la cita</param>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaCancelarCita"/></returns>
         public async Task<RespuestaCancelarCita> RceCancelarCita
             (
                 string url,
@@ -26,6 +26,16 @@ namespace Pasamonte.ApiClient
                 string idCita
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaCancelarCita>("RceCancelarCita");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaCancelarCita>("RceCancelarCita");
+            if (string.IsNullOrWhiteSpace(idCita))
+                return new RespuestaCancelarCita()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "RceCancelarCita - Error parametro idCita vacio"
+                };
             var respuesta = new RespuestaCancelarCita()
             {
 

@@ -16,10 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// RegistrarTurno
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
         /// <param name="turno">Turno a registrar</param>
-        /// <returns></returns>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaRegistrarTurno"/></returns>
         public async Task<RespuestaRegistrarTurno> RegistrarTurno
             (
                 string url,
@@ -27,6 +27,16 @@ namespace Pasamonte.ApiClient
                 Turno turno
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaRegistrarTurno>("RegistrarTurno");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaRegistrarTurno>("RegistrarTurno");
+            if (turno == null)
+                return new RespuestaRegistrarTurno()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "RegistrarTurno - Error parametro turno nulo"
+                };
             var respuesta = new RespuestaRegistrarTurno()
             {
 

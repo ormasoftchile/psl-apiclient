@@ -16,10 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// RegistrarServicio
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
         /// <param name="servicio">Servicio a registrar</param>
-        /// <returns></returns>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaRegistrarServicio"/></returns>
         public async Task<RespuestaRegistrarServicio> RegistrarServicio
             (
                 string url,
@@ -27,6 +27,16 @@ namespace Pasamonte.ApiClient
                 Servicio servicio
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaRegistrarServicio>("RegistrarServicio");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaRegistrarServicio>("RegistrarServicio");
+            if (servicio == null)
+                return new RespuestaRegistrarServicio()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "RegistrarServicio - Error parametro servicio nulo"
+                };
             var respuesta = new RespuestaRegistrarServicio()
             {
 

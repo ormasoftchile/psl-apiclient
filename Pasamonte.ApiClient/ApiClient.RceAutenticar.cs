@@ -16,11 +16,11 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// Autenticar
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="identificacionUsuario">Identificacion del usuario</param>
+        /// <param name="identificacionTerminal">Identificacion del terminal</param>
+        /// <param name="identificacionSistemaRemoto">Identificacion del sistema remoto (RCE)</param>
         /// <returns></returns>
         public async Task<RespuestaValidarIdentificacion> RceAutenticar
             (
@@ -31,6 +31,10 @@ namespace Pasamonte.ApiClient
                 IdentificacionSistemaRemoto identificacionSistemaRemoto
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaValidarIdentificacion>("RceAutenticar");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaValidarIdentificacion>("RceAutenticar");
             var respuesta = new RespuestaValidarIdentificacion()
             {
                 

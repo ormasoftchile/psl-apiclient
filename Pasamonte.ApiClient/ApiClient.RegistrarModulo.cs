@@ -16,10 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// RegistrarModulo
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
         /// <param name="modulo">Modulo a registrar</param>
-        /// <returns></returns>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaRegistrarModulo"/></returns>
         public async Task<RespuestaRegistrarModulo> RegistrarModulo
             (
                 string url,
@@ -27,6 +27,16 @@ namespace Pasamonte.ApiClient
                 Modulo modulo
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaRegistrarModulo>("RegistrarModulo");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaRegistrarModulo>("RegistrarModulo");
+            if (modulo == null)
+                return new RespuestaRegistrarModulo()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "RegistrarModulo - Error parametro modulo nulo"
+                };
             var respuesta = new RespuestaRegistrarModulo()
             {
 

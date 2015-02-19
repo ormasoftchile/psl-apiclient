@@ -15,8 +15,8 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// RceCambiarClave
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
         /// <param name="identificacionUsuario"></param>
         /// <param name="identificacionTerminal"></param>
         /// <param name="identificacionSistemaRemoto"></param>
@@ -32,6 +32,10 @@ namespace Pasamonte.ApiClient
                 string nuevaClave
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaCambiarClave>("RceCambiarClave");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaCambiarClave>("RceCambiarClave");
             var respuesta = new RespuestaCambiarClave()
             {
 

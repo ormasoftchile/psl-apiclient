@@ -16,10 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// ObtenerServicios
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="query"></param>
-        /// <returns>Objeto de respuesta</returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="query">Criterios de seleccion. <see cref="QueryObtenerServicio"/></param>
+        /// <returns>Objeto de respuesta. <see cref="RespuestaObtenerServicio"/></returns>
         public async Task<RespuestaObtenerServicios> ObtenerServicios
             (
                 string url,
@@ -27,6 +27,10 @@ namespace Pasamonte.ApiClient
                 QueryObtenerServicios query
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaObtenerServicios>("ObtenerServicios");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaObtenerServicios>("ObtenerServicios");
             var respuesta = new RespuestaObtenerServicios()
             {
 

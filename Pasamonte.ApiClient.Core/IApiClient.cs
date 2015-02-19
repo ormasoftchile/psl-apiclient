@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Pasamonte.ApiClient.Core.Dto;
-
+    
 namespace Pasamonte.ApiClient.Core
 {
     /// <summary>
@@ -189,7 +189,7 @@ namespace Pasamonte.ApiClient.Core
             (
                 string url,
                 string apiKey,
-                string idServicio
+                Guid idServicio
             );
         #endregion
         #region ObtenerServicios
@@ -235,7 +235,7 @@ namespace Pasamonte.ApiClient.Core
             (
                 string url,
                 string apiKey,
-                string idModulo
+                Guid idModulo
             );
         #endregion
         #region ObtenerModulos
@@ -281,7 +281,7 @@ namespace Pasamonte.ApiClient.Core
             (
                 string url,
                 string apiKey,
-                string idTurno
+                Guid idTurno
             );
         #endregion
         #region ObtenerTurnos

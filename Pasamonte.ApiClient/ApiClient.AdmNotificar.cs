@@ -22,6 +22,16 @@ namespace Pasamonte.ApiClient
                 Notificacion notificacion
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaNotificar>("Notificar");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaNotificar>("Notificar");
+            if (notificacion == null)
+                return new RespuestaNotificar()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "Error en Notificar. El objeto notificacion es nulo"
+                };
             var respuesta = new RespuestaNotificar()
             {
 

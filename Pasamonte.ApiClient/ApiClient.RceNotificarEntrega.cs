@@ -15,13 +15,13 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// NotificarEntrega
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
         /// <param name="identificacionUsuario"></param>
         /// <param name="identificacionTerminal"></param>
         /// <param name="identificacionSistemaRemoto"></param>
-        /// <param name="entrega"></param>
-        /// <returns>RespuestaNotificarEntrega</returns>
+        /// <param name="entrega">Entrega a notificar</param>
+        /// <returns>Objeto con la respuesta. <see cref="RespuestaNotificarEntrega"/></returns>
         public async Task<RespuestaNotificarEntrega> RceNotificarEntrega
             (
                 string url,
@@ -32,6 +32,16 @@ namespace Pasamonte.ApiClient
                 Entrega entrega
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaNotificarEntrega>("RceNotificarEntrega");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaNotificarEntrega>("RceNotificarEntrega");
+            if (entrega == null)
+                return new RespuestaNotificarEntrega()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "RceNotificarEntrega - Error parametro entrega nulo"
+                };
             var respuesta = new RespuestaNotificarEntrega()
             {
 

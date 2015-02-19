@@ -16,10 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// ObtenerModulos
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="query"></param>
-        /// <returns>Objeto de respuesta</returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="query">Criterios de seleccion. <see cref="QueryObtenerModulos"/></param>
+        /// <returns>Objeto de respuesta. <see cref="RespuestaObtenerModulos"/></returns>
         public async Task<RespuestaObtenerModulos> ObtenerModulos
             (
                 string url,
@@ -27,6 +27,10 @@ namespace Pasamonte.ApiClient
                 QueryObtenerModulos query
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaObtenerModulos>("ObtenerModulos");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaObtenerModulos>("ObtenerModulos");
             var respuesta = new RespuestaObtenerModulos()
             {
 

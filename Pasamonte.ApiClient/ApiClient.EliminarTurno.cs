@@ -15,17 +15,27 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// EliminarTurno
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="idTurno"></param>
-        /// <returns></returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="idTurno">Identificador del turno</param>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaEliminarTurno"/></returns>
         public async Task<RespuestaEliminarTurno> EliminarTurno
             (
                 string url,
                 string apiKey,
-                string idTurno
+                Guid idTurno
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaEliminarTurno>("EliminarTurno");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaEliminarTurno>("EliminarTurno");
+            if (idTurno == Guid.Empty)
+                return new RespuestaEliminarTurno()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "EliminarTurno - Error parametro idTurno vacio"
+                };
             var respuesta = new RespuestaEliminarTurno()
             {
 

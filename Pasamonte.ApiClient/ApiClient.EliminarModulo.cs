@@ -15,17 +15,27 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// EliminarModulo
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="idModulo"></param>
-        /// <returns></returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="idModulo">Identificador del modulo.</param>
+        /// <returns>Objeto con la respuesta. <see cref="RespuestaEliminarModulo"/></returns>
         public async Task<RespuestaEliminarModulo> EliminarModulo
             (
                 string url,
                 string apiKey,
-                string idModulo
+                Guid idModulo
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaEliminarModulo>("EliminarModulo");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaEliminarModulo>("EliminarModulo");
+            if (idModulo == Guid.Empty)
+                return new RespuestaEliminarModulo()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "Eliminar modulo. Error idModulo esta vacio"
+                };
             var respuesta = new RespuestaEliminarModulo()
             {
 

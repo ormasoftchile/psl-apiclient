@@ -40,5 +40,35 @@ namespace Pasamonte.ApiClient
         {
             this.log = log;
         }
+
+        protected bool ValidarApiKey(string apiKey)
+        {
+            if (string.IsNullOrWhiteSpace(apiKey))
+                return false;
+            return true;
+        }
+
+        protected T RespuestaErrorApiKey<T>(string metodo) where T: RespuestaApi, new()
+        {
+            var respuesta = new T();
+            respuesta.Status = StatusLlamada.ErrorDesconocido;
+            respuesta.Descripcion = string.Format("Error en metodo {0}. ApiKey erroneo", metodo);
+            return respuesta;
+        }
+
+        protected bool ValidarUrl(string url)
+        {
+            if (string.IsNullOrWhiteSpace(url))
+                return false;
+            return true;
+        }
+
+        protected T RespuestaErrorUrl<T>(string metodo) where T : RespuestaApi, new()
+        {
+            var respuesta = new T();
+            respuesta.Status = StatusLlamada.ErrorDesconocido;
+            respuesta.Descripcion = string.Format("Error en metodo {0}. Url erronea", metodo);
+            return respuesta;
+        }
     }
 }

@@ -15,12 +15,12 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// ObtenerEntregas
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
-        /// <returns></returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="identificacionUsuario">Identificacion del paciente</param>
+        /// <param name="identificacionTerminal">Identificacion del terminal que consulta</param>
+        /// <param name="identificacionSistemaRemoto">Identificacion del sistema remoto (RCE)</param>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaObtenerEntregas"/></returns>
         public async Task<RespuestaObtenerEntregas> RceObtenerEntregas
             (
                 string url,
@@ -30,6 +30,10 @@ namespace Pasamonte.ApiClient
                 IdentificacionSistemaRemoto identificacionSistemaRemoto
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaObtenerEntregas>("RceObtenerEntregas");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaObtenerEntregas>("RceObtenerEntregas");
             var respuesta = new RespuestaObtenerEntregas()
             {
 

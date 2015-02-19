@@ -10,16 +10,8 @@ namespace Pasamonte.ApiClient.Core.Dto
     /// <summary>
     /// RespuestaCambiarClave - describe la respuesta a la consulta CambiarClave.
     /// </summary>
-    public class RespuestaCambiarClave
+    public class RespuestaCambiarClave: RespuestaApi
     {
-        /// <summary>
-        /// CodigoRespuesta - status de la llamada
-        /// </summary>
-        public StatusLlamada Status { get; set; }
-        /// <summary>
-        /// Descripcion - glosa descriptiva del status de la llamada.
-        /// </summary>
-        public string Descripcion { get; set; }
     }
     #endregion
 }

@@ -16,12 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// ObtenerCitas
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="identificacionUsuario"></param>
-        /// <param name="identificacionTerminal"></param>
-        /// <param name="identificacionSistemaRemoto"></param>
-        /// <returns>Objeto de respuesta</returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="query">Query sobre las citas</param>
+        /// <returns>Objeto de respuesta. <see cref="RespuestaObtenerCitas"/></returns>
         public async Task<RespuestaObtenerCitas> RceObtenerCitas
             (
                 string url,
@@ -29,6 +27,10 @@ namespace Pasamonte.ApiClient
                 QueryObtenerCitas query
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaObtenerCitas>("RceObtenerCitas");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaObtenerCitas>("RceObtenerCitas");
             var respuesta = new RespuestaObtenerCitas()
             {
 

@@ -10,18 +10,10 @@ namespace Pasamonte.ApiClient.Core.Dto
     /// <summary>
     /// RespuestaCitas - describe la respuesta a la consulta ObtenerCitas.
     /// </summary>
-    public class RespuestaObtenerCitas
+    public class RespuestaObtenerCitas: RespuestaApi
     {
         /// <summary>
-        /// CodigoRespuesta - status de la llamada
-        /// </summary>
-        public StatusLlamada Status { get; set; }
-        /// <summary>
-        /// Descripcion - glosa descriptiva del status de la llamada.
-        /// </summary>
-        public string Descripcion { get; set; }
-        /// <summary>
-        /// Entregas - colección de las entregas (recetas) pendientes para el paciente.
+        /// Citas - colección de las citas para el paciente.
         /// </summary>
         public IEnumerable<Cita> Citas { get; set; }
     }

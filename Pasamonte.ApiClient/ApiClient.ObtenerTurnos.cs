@@ -16,10 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// ObtenerTurnos
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="query"></param>
-        /// <returns>Objeto de respuesta</returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="query">Criterios de seleccion</param>
+        /// <returns>Objeto de respuesta. <see cref="RespuestaObtenerTurnos"/></returns>
         public async Task<RespuestaObtenerTurnos> ObtenerTurnos
             (
                 string url,
@@ -27,6 +27,10 @@ namespace Pasamonte.ApiClient
                 QueryObtenerTurnos query
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaObtenerTurnos>("ObtenerTurnos");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaObtenerTurnos>("ObtenerTurnos");
             var respuesta = new RespuestaObtenerTurnos()
             {
 

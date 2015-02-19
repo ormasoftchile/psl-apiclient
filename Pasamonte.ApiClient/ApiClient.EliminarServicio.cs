@@ -15,17 +15,27 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// EliminarServicio
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
-        /// <param name="idServicio"></param>
-        /// <returns></returns>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
+        /// <param name="idServicio">Identificador del servicio</param>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaEliminarServicio"/></returns>
         public async Task<RespuestaEliminarServicio> EliminarServicio
             (
                 string url,
                 string apiKey,
-                string idServicio
+                Guid idServicio
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaEliminarServicio>("EliminarServicio");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaEliminarServicio>("EliminarServicio");
+            if (idServicio == Guid.Empty)
+                return new RespuestaEliminarServicio()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "EliminarServicio - Error parametro idServicio vacio"
+                };
             var respuesta = new RespuestaEliminarServicio()
             {
 

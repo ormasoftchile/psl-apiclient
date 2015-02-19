@@ -16,11 +16,10 @@ namespace Pasamonte.ApiClient
         /// <summary>
         /// RegistrarCita
         /// </summary>
-        /// <param name="url"></param>
-        /// <param name="apiKey"></param>
+        /// <param name="url">Url del servicio Pasamonte</param>
+        /// <param name="apiKey">Clave de integracion</param>
         /// <param name="cita">Cita a registrar</param>
-        /// <param name="idCita"></param>
-        /// <returns></returns>
+        /// <returns>Objeto con respuesta. <see cref="RespuestaRegistrarCita"/></returns>
         public async Task<RespuestaRegistrarCita> RceRegistrarCita
             (
                 string url,
@@ -28,6 +27,16 @@ namespace Pasamonte.ApiClient
                 Cita cita
             )
         {
+            if (!ValidarUrl(url))
+                return RespuestaErrorUrl<RespuestaRegistrarCita>("RceRegistrarCita");
+            if (!ValidarApiKey(apiKey))
+                return RespuestaErrorApiKey<RespuestaRegistrarCita>("RceRegistrarCita");
+            if (cita == null)
+                return new RespuestaRegistrarCita()
+                {
+                    Status = StatusLlamada.ErrorDesconocido,
+                    Descripcion = "RceRegistrarCita - Error parametro cita nulo"
+                };
             var respuesta = new RespuestaRegistrarCita()
             {
 
