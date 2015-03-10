@@ -1,0 +1,15 @@
+﻿<Window x:Class="Pasamonte.ApiClient.Tests.Gui.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" >
+    <WrapPanel >
+        <TabControl HorizontalContentAlignment="Left">
+            <TabItem Header="Conexión">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Nodos">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+    </WrapPanel>
+</Window>
