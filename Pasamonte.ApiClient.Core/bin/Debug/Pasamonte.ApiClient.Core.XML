@@ -34,6 +34,94 @@
             TarjetaContactless - tarjeta contactless
             </summary>
         </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.id">
+            <summary>
+            Post identity
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.sistemaDeOrigenId">
+            <summary>
+            SistemaDeOrigenId - id asignado al sistema remoto.
+            </summary>
+            <remarks>Es asignado por PSL en convenio con el party remoto.</remarks>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.idEnSistemaDeOrigen">
+            <summary>
+            IdEnSistemaDeOrigen - Id en el sistema remoto.
+            </summary>
+            Las citas son recibidas desde un sistema externo.
+            Este id representa la identificacion unica de la cita en el sistema externo.
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.persona">
+            <summary>
+            Datos de la persona participante de la cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.fechaHoraInicio">
+            <summary>
+            FechaHoraInicio del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.fechaHoraLlegada">
+            <summary>
+            FechaHoraLlegada del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.fechaHoraTermino">
+            <summary>
+            FechaHoraTermino del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.fechaHoraAsignacion">
+            <summary>
+            FechaHoraAsignacion del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.medioDeReserva">
+            <summary>
+            MedioDeReserva del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.esGrupal">
+            <summary>
+            EsGrupal del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.tipoDeAtencion">
+            <summary>
+            Id de razon de la cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.instrumento">
+            <summary>
+            IdDeInstrumento del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.nodoId">
+            <summary>
+            IdNodo del Cita
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.nodo">
+            <summary>
+            Related Object
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.nombresProfesional">
+            <summary>
+            NombresProfesional - nombres del profesional.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.primerApellidoProfesional">
+            <summary>
+            PrimerApellidoProfesional - apellido paterno del profesional.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Cita.segundoApellidoProfesional">
+            <summary>
+            SegundoApellidoProfesional - apellido materno del profesional.
+            </summary>
+        </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.Id">
             <summary>
             Post identity
@@ -44,7 +132,8 @@
             IdEnSistemaExterno - Id en el sistema remoto.
             </summary>
             Las entregas son recibidas desde un sistema externo.
-            Este id representa la identificacion unica de la entrega en el sistema externo.</member>
+            Este id representa la identificacion unica de la entrega en el sistema externo.
+        </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.TipoEntrega">
             <summary>
             TipoEntrega - o tipo de receta según la codificación del proveedor de RCE.
@@ -63,7 +152,7 @@
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.PersonaId">
             <summary>
             Related Object Id
-            </summary>
+            </summary>        
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.FechaHoraDispensacion">
             <summary>
@@ -78,11 +167,23 @@
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.TerminalId">
             <summary>
             Related Object Id
-            </summary>
+            </summary>        
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.NodoId">
             <summary>
             Id del nodo de la entrega
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.Parcial">
+            <summary>
+            Parcial - indica si el despacho realizado se hizo de manera parcial, es decir,
+            sin completar todos los items.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Entrega.FechaProximoDespacho">
+            <summary>
+            FechaProximoDespacho - para entregas notificadas, especifica la fecha de proximo
+            despacho entregada por el RCE.
             </summary>
         </member>
         <member name="T:Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto">
@@ -96,19 +197,20 @@
             Está compuesto de la siguiente manera:
             xxxxxxxx.yyyyyy.[z]
             -------- ------ ---
-            |        |    |
-            |        |    |
+                |        |    |
+                |        |    |
             Identificador \    \
             de la empresa  \    \
             Ej. Saydex      \    ------------- Versión del software. Ej. 1.0.0.1a
-            Identificador del software. Ej. Rayen
+                            Identificador del software. Ej. Rayen
             </summary>
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal.Codigo">
             <summary>
             Codigo - Código del terminal
             </summary>
-            Corresponde a código configurado para cada terminal  en su archivo de configuración.</member>
+            Corresponde a código configurado para cada terminal  en su archivo de configuración.
+        </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal.CodigoEstablecimiento">
             <summary>
             CodigoEstablecimiento - código del establecimiento en el que se ubica físicamente el equipo desde el
@@ -124,6 +226,11 @@
         <member name="T:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario">
             <summary>
             IdentificacionUsuario - datos de identificación de un usuario.
+            </summary>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario.Reset">
+            <summary>
+            Reset - limpia la información dejándola en defaults.
             </summary>
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario.Tipo">
@@ -146,11 +253,6 @@
             Clave - clave del usuario
             </summary>
         </member>
-        <member name="M:Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario.Reset">
-            <summary>
-            Reset - limpia la información dejándola en defaults.
-            </summary>
-        </member>
         <member name="T:Pasamonte.ApiClient.Core.Dto.ItemEntrega">
             <summary>
             Representa un nodo de la red
@@ -166,10 +268,21 @@
             IdEnSistemaExterno - Id en el sistema remoto.
             </summary>
             Las entregas y sus items son recibidas desde un sistema externo.
-            Este id representa la identificacion unica del item de la entrega en el sistema externo.</member>
+            Este id representa la identificacion unica del item de la entrega en el sistema externo.
+        </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.CantidadEntregar">
             <summary>
             CantidadEntregar - cantidad en unidades a entregar del producto.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.CantidadEntregada">
+            <summary>
+            CantidadEntregada - cantidad en unidades entregadas del producto.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.StockRCE">
+            <summary>
+            StockRCE - stock restante del articulo en el RCE.
             </summary>
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.DescripcionEntrega">
@@ -185,7 +298,7 @@
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.EntregaId">
             <summary>
             Related Object Id
-            </summary>
+            </summary>        
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.IdentificadorProducto">
             <summary>
@@ -205,6 +318,51 @@
         <member name="P:Pasamonte.ApiClient.Core.Dto.ItemEntrega.EsSustituible">
             <summary>
             ???
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Modulo.id">
+            <summary>
+            Post identity
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.id">
+            <summary>
+            Post identity
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.idTipoNodo">
+            <summary>
+            Identificador del tipo de nodo
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.titulo">
+            <summary>
+            Titulo
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.descripcion">
+            <summary>
+            Descripcion for this article
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.urlImagen">
+            <summary>
+            Url for the image representing the post
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.publico">
+            <summary>
+            If the article is published and visible to others or not
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.idNodoPadre">
+            <summary>
+            IdNodoPadre
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Nodo.codigoPublico">
+            <summary>
+            CodigoPublico - codigo oficial del nodo
             </summary>
         </member>
         <member name="T:Pasamonte.ApiClient.Core.Dto.Persona">
@@ -247,14 +405,101 @@
             TipoIdentificacionPaciente
             </summary>
             Especifica cómo se identifica a un paciente, ya sea con su RUN, el RUN de la persona responsable o bien
-            con el número de pasaporte.</member>
+            con el número de pasaporte.
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.QueryObtenerModulos.id">
+            <summary>
+            Post identity
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.QueryObtenerTurnos.id">
+            <summary>
+            Post identity
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.QueryObtenerTurnos.idNodo">
+            <summary>
+            Identificador del nodo donde está instalado
+            </summary>
+        </member>
+        <member name="T:Pasamonte.ApiClient.Core.Dto.RespuestaCambiarClave">
+            <summary>
+            RespuestaCambiarClave - describe la respuesta a la consulta CambiarClave.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.RespuestaApi.Status">
+            <summary>
+            CodigoRespuesta - status de la llamada
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.RespuestaApi.Descripcion">
+            <summary>
+            Descripcion - glosa descriptiva del status de la llamada.
+            </summary>
+        </member>
+        <member name="T:Pasamonte.ApiClient.Core.Dto.RespuestaCancelarCita">
+            <summary>
+            RespuestaCancelarCita - describe la respuesta a la consulta CancelarCita.
+            </summary>
+        </member>
+        <member name="T:Pasamonte.ApiClient.Core.Dto.RespuestaConfirmarCita">
+            <summary>
+            RespuestaCitas - describe la respuesta a la consulta ObtenerCitas.
+            </summary>
+        </member>
+        <member name="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerCitas">
+            <summary>
+            RespuestaCitas - describe la respuesta a la consulta ObtenerCitas.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerCitas.Citas">
+            <summary>
+            Citas - colección de las citas para el paciente.
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Servicio.id">
+            <summary>
+            Post identity
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Servicio.activo">
+            <summary>
+            Activo
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Servicio.bloqueado">
+            <summary>
+            Bloqueado
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Servicio.idNodo">
+            <summary>
+            Identificador del nodo donde está instalado
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Servicio.nodo">
+            <summary>
+            Nodo
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Turno.id">
+            <summary>
+            Post identity
+            </summary>
+        </member>
+        <member name="P:Pasamonte.ApiClient.Core.Dto.Turno.idNodo">
+            <summary>
+            Identificador del nodo donde está instalado
+            </summary>
+        </member>
         <member name="T:Pasamonte.ApiClient.Core.IApiClient">
             <summary>
             ApiClient - define las operaciones que se pueden realizar como
             cliente de la api de integración de Pasamonte.
             </summary>
             Toda llamada debe incorporar la url de destino del server Pasamonte
-            a utilizar y la clave de integración (apiKey).</member>
+            a utilizar y la clave de integración (apiKey).
+        </member>
         <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceAutenticar(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
             Autenticar - valida la identidad del usuario final en el sistema
@@ -265,7 +510,20 @@
             <param name="identificacionUsuario">Identificación del usuario final.</param>
             <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-            <returns>Objeto con datos de respuesta <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaValidarIdentificacion" /></returns>
+            <returns>Objeto con datos de respuesta <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaValidarIdentificacion"/></returns>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceCambiarClave(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto,System.String)">
+            <summary>
+            CambiarClave - cambia la clave del usuario final en el sistema
+            remoto.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="identificacionUsuario">Identificación del usuario final.</param>
+            <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
+            <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
+            <param name="nuevaClave">Nueva clave del usuario.</param>
+            <returns>Objeto con datos de respuesta <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaValidarIdentificacion"/></returns>
         </member>
         <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceObtenerEntregas(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto)">
             <summary>
@@ -277,7 +535,7 @@
             <param name="identificacionUsuario">Identificación del usuario final.</param>
             <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-            <returns>Objeto con datos de las entregas <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas" /></returns>
+            <returns>Objeto con datos de las entregas <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas"/></returns>
         </member>
         <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceNotificarEntrega(System.String,System.String,Pasamonte.ApiClient.Core.Dto.IdentificacionUsuario,Pasamonte.ApiClient.Core.Dto.IdentificacionTerminal,Pasamonte.ApiClient.Core.Dto.IdentificacionSistemaRemoto,Pasamonte.ApiClient.Core.Dto.Entrega)">
             <summary>
@@ -289,22 +547,124 @@
             <param name="identificacionUsuario">Identificación del usuario final.</param>
             <param name="identificacionTerminal">Identificación del terminal de acceso para el usuario.</param>
             <param name="identificacionSistemaRemoto">Identificación del sistema de registro clínico.</param>
-            <param name="entrega">Objeto que describe la entrega realizada <see cref="T:Pasamonte.ApiClient.Core.Dto.Entrega" /></param>
-            <returns>Objeto con status de la operación <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaNotificarEntrega" /></returns>
+            <param name="entrega">Objeto que describe la entrega realizada <see cref="T:Pasamonte.ApiClient.Core.Dto.Entrega"/></param>
+            <returns>Objeto con status de la operación <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaNotificarEntrega"/></returns>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceRegistrarCita(System.String,System.String,Pasamonte.ApiClient.Core.Dto.Cita)">
+            <summary>
+            RceRegistrarCita - registra una cita de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="cita">Cita</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceConfirmarCita(System.String,System.String,System.String)">
+            <summary>
+            RceConfirmarCita - confirma la llegada a una cita de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="idCita">Id de la Cita</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceCancelarCita(System.String,System.String,System.String)">
+            <summary>
+            RceCancelarCita - Cancela una cita de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="idCita">Id de la Cita</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RceObtenerCitas(System.String,System.String,Pasamonte.ApiClient.Core.Dto.QueryObtenerCitas)">
+            <summary>
+            ObtenerCitas - obtiene las citas pendientes para un paciente o un nodo asociado
+            a un terminal.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="query">Query con criterios de seleccion de citas</param>
+            <returns>Objeto con datos de las citas <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerCitas"/></returns>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RegistrarServicio(System.String,System.String,Pasamonte.ApiClient.Core.Dto.Servicio)">
+            <summary>
+            RegistrarServicio - registra una Servicio de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="servicio">Id de la Servicio</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.EliminarServicio(System.String,System.String,System.Guid)">
+            <summary>
+            EliminarServicio - Cancela una Servicio de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="idServicio">Id de la Servicio</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.ObtenerServicios(System.String,System.String,Pasamonte.ApiClient.Core.Dto.QueryObtenerServicios)">
+            <summary>
+            ObtenerServicios - obtiene las Servicios pendientes para un paciente o un nodo asociado
+            a un terminal.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="query">Query con criterios de seleccion de Servicios</param>
+            <returns>Objeto con datos de las Servicios <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerServicios"/></returns>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RegistrarModulo(System.String,System.String,Pasamonte.ApiClient.Core.Dto.Modulo)">
+            <summary>
+            RegistrarModulo - registra una cita de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="modulo">Id de la Modulo</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.EliminarModulo(System.String,System.String,System.Guid)">
+            <summary>
+            EliminarModulo - Cancela una cita de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="idModulo">Id de la Modulo</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.ObtenerModulos(System.String,System.String,Pasamonte.ApiClient.Core.Dto.QueryObtenerModulos)">
+            <summary>
+            ObtenerModulos - obtiene las citas pendientes para un paciente o un nodo asociado
+            a un terminal.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="query">Query con criterios de seleccion de citas</param>
+            <returns>Objeto con datos de las citas <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerModulos"/></returns>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.RegistrarTurno(System.String,System.String,Pasamonte.ApiClient.Core.Dto.Turno)">
+            <summary>
+            RegistrarTurno - registra una Turno de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="turno">Id de la Turno</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.EliminarTurno(System.String,System.String,System.Guid)">
+            <summary>
+            EliminarTurno - Cancela una Turno de un paciente.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="idTurno">Id de la Turno</param>
+        </member>
+        <member name="M:Pasamonte.ApiClient.Core.IApiClient.ObtenerTurnos(System.String,System.String,Pasamonte.ApiClient.Core.Dto.QueryObtenerTurnos)">
+            <summary>
+            ObtenerTurnos - obtiene las Turnos pendientes para un paciente o un nodo asociado
+            a un terminal.
+            </summary>
+            <param name="url">Url del servidor Pasamonte.</param>
+            <param name="apiKey">Clave de integración.</param>
+            <param name="query">Query con criterios de seleccion de Turnos</param>
+            <returns>Objeto con datos de las Turnos <see cref="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerTurnos"/></returns>
         </member>
         <member name="T:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas">
             <summary>
             RespuestaEntregas - describe la respuesta a la consulta ObtenerEntregas.
-            </summary>
-        </member>
-        <member name="P:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas.Status">
-            <summary>
-            CodigoRespuesta - status de la llamada
-            </summary>
-        </member>
-        <member name="P:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas.Descripcion">
-            <summary>
-            Descripcion - glosa descriptiva del status de la llamada.
             </summary>
         </member>
         <member name="P:Pasamonte.ApiClient.Core.Dto.RespuestaObtenerEntregas.Persona">
@@ -411,6 +771,11 @@
         <member name="F:Pasamonte.ApiClient.Core.StatusLlamada.ErrorEstadoReceta">
             <summary>
             ErrorEstadoReceta - el estado de la receta no es válido o bien no es válido para realizar operaciones.
+            </summary>
+        </member>
+        <member name="F:Pasamonte.ApiClient.Core.StatusLlamada.ErrorCitaNoExiste">
+            <summary>
+            ErrorCitaNoExiste - la cita referida por el identificador no existe.
             </summary>
         </member>
         <member name="T:Pasamonte.ApiClient.Core.TipoIdentificacion">

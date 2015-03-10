@@ -1,5 +1,6 @@
 C:\Pasamonte\psl-apiclient\ApiClient.Tests\bin\Debug\ApiClient.Tests.dll
 C:\Pasamonte\psl-apiclient\ApiClient.Tests\bin\Debug\ApiClient.Tests.pdb
-C:\Pasamonte\psl-apiclient\ApiClient.Tests\obj\Debug\ApiClient.Tests.csprojResolveAssemblyReference.cache
+C:\Pasamonte\psl-apiclient\ApiClient.Tests\bin\Debug\log4net.dll
+C:\Pasamonte\psl-apiclient\ApiClient.Tests\bin\Debug\log4net.xml
 C:\Pasamonte\psl-apiclient\ApiClient.Tests\obj\Debug\ApiClient.Tests.dll
 C:\Pasamonte\psl-apiclient\ApiClient.Tests\obj\Debug\ApiClient.Tests.pdb

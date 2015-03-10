@@ -4,5 +4,3 @@ C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Core\bin\Debug\Pasamonte.ApiClien
 C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Core\obj\Debug\Pasamonte.ApiClient.Core.dll
 C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Core\obj\Debug\Pasamonte.ApiClient.Core.pdb
 C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Core\obj\Debug\ApiClient.Core.csprojResolveAssemblyReference.cache
-C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Core\bin\Debug\Pasamonte.ApiClient.Domain.dll
-C:\Pasamonte\psl-apiclient\Pasamonte.ApiClient.Core\bin\Debug\Pasamonte.ApiClient.Domain.pdb
