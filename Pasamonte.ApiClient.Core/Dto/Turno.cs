@@ -41,9 +41,21 @@ namespace Pasamonte.ApiClient.Core.Dto
 
     public enum EstadoTurno
     {
+        /// <summary>
+        /// Estado inicial del turno. Se utiliza durante la creacion del turno.
+        /// </summary>
         NoDefinido = 0,
+        /// <summary>
+        /// Activo - paciente se encuentra esperando el turno de atencion
+        /// </summary>
         Activo = 1,
+        /// <summary>
+        /// Atendido - paciente ya fue convocado al modulo de atencion.
+        /// </summary>
         Atendido = 2,
+        /// <summary>
+        /// Cancelado - turno cancelado.
+        /// </summary>
         Cancelado = 3
     }
 }
