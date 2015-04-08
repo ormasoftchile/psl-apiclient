@@ -147,6 +147,21 @@ namespace Pasamonte.ApiClient.Core.Dto
         #region sector
         public string sector { get; set; }
         #endregion
+        #region Columna1
+        public string columna1 { get; set; }
+        #endregion
+        #region Columna2
+        public string columna2 { get; set; }
+        #endregion
+        #region Columna3
+        public string columna3 { get; set; }
+        #endregion
+        #region Columna4
+        public string columna4 { get; set; }
+        #endregion
+        #region Columna5
+        public string columna5 { get; set; }
+        #endregion
     }
 
     public enum EstadoCita
