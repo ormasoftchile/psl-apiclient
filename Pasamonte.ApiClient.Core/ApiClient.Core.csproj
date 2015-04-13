@@ -50,11 +50,13 @@
     <Compile Include="Dto\IdentificacionTerminal.cs" />
     <Compile Include="Dto\IdentificacionUsuario.cs" />
     <Compile Include="Dto\ItemEntrega.cs" />
+    <Compile Include="Dto\Terminal.cs" />
     <Compile Include="Dto\Modulo.cs" />
     <Compile Include="Dto\Nodo.cs" />
     <Compile Include="Dto\Notificacion.cs" />
     <Compile Include="Dto\Persona.cs" />
     <Compile Include="Dto\QueryObtenerCitas.cs" />
+    <Compile Include="Dto\QueryObtenerTerminales.cs" />
     <Compile Include="Dto\QueryObtenerModulos.cs" />
     <Compile Include="Dto\QueryObtenerPersonas.cs" />
     <Compile Include="Dto\QueryObtenerServicios.cs" />
@@ -67,6 +69,7 @@
     <Compile Include="Dto\RespuestaEliminarTurno.cs" />
     <Compile Include="Dto\RespuestaNotificar.cs" />
     <Compile Include="Dto\RespuestaObtenerCitas.cs" />
+    <Compile Include="Dto\RespuestaObtenerTerminales.cs" />
     <Compile Include="Dto\RespuestaObtenerModulos.cs" />
     <Compile Include="Dto\RespuestaObtenerServicios.cs" />
     <Compile Include="Dto\RespuestaObtenerTurnos.cs" />

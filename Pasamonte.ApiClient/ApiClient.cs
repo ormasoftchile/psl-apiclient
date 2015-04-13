@@ -33,6 +33,7 @@ namespace Pasamonte.ApiClient
         const string AccionObtenerModulos = AdmBaseAccion + "obtenermodulos";
         const string AccionObtenerServicios = AdmBaseAccion + "obtenerservicios";
         const string AccionObtenerTurnos = AdmBaseAccion + "obtenerturnos";
+        const string AccionObtenerTerminales = AdmBaseAccion + "obtenerterminales";
 
         ILog log;
 

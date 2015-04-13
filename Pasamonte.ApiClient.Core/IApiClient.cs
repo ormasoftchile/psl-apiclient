@@ -298,6 +298,22 @@ namespace Pasamonte.ApiClient.Core
             );
         #endregion
         #endregion
+        #region ObtenerTerminales
+        /// <summary>
+        /// ObtenerTerminales - obtiene las Terminales pendientes para un paciente o un nodo asociado
+        /// a un terminal.
+        /// </summary>
+        /// <param name="url">Url del servidor Pasamonte.</param>
+        /// <param name="apiKey">Clave de integración.</param>
+        /// <param name="query">Query con criterios de seleccion de Terminales</param>
+        /// <returns>Objeto con datos de las Terminales <see cref="RespuestaObtenerTerminales"/></returns>
+        Task<RespuestaObtenerTerminales> ObtenerTerminales
+            (
+                string url,
+                string apiKey,
+                QueryObtenerTerminales query
+            );
+        #endregion
         #region AdmNotificar
         Task<RespuestaNotificar> Notificar
             (
