@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient.Core.net_1_1", "Pasamonte.ApiClient.Core.net_1_1.csproj", "{6909C154-93E0-46BF-BB7C-E67C6BA09073}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{6909C154-93E0-46BF-BB7C-E67C6BA09073}.Debug.ActiveCfg = Debug|.NET
+		{6909C154-93E0-46BF-BB7C-E67C6BA09073}.Debug.Build.0 = Debug|.NET
+		{6909C154-93E0-46BF-BB7C-E67C6BA09073}.Release.ActiveCfg = Release|.NET
+		{6909C154-93E0-46BF-BB7C-E67C6BA09073}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

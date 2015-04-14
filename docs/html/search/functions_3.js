@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['obtenermodulos',['ObtenerModulos',['../class_pasamonte_1_1_api_client_1_1_api_client.html#a93a779ada910b1c13fe57d1b05d545a8',1,'Pasamonte.ApiClient.ApiClient.ObtenerModulos()'],['../interface_pasamonte_1_1_api_client_1_1_core_1_1_i_api_client.html#acbce5974671c7a27a62404c016c61207',1,'Pasamonte.ApiClient.Core.IApiClient.ObtenerModulos()']]],
+  ['obtenerservicios',['ObtenerServicios',['../class_pasamonte_1_1_api_client_1_1_api_client.html#a65e81bbef55d71c67ae5acab59c6cb30',1,'Pasamonte.ApiClient.ApiClient.ObtenerServicios()'],['../interface_pasamonte_1_1_api_client_1_1_core_1_1_i_api_client.html#a7b4fc4577b42efe57d869396bad7547b',1,'Pasamonte.ApiClient.Core.IApiClient.ObtenerServicios()']]],
+  ['obtenerterminales',['ObtenerTerminales',['../class_pasamonte_1_1_api_client_1_1_api_client.html#a2784ab9ac8f8f3cbd856fbe3a1079b3b',1,'Pasamonte.ApiClient.ApiClient.ObtenerTerminales()'],['../interface_pasamonte_1_1_api_client_1_1_core_1_1_i_api_client.html#a01672a533f4d825bda88757b05e0396e',1,'Pasamonte.ApiClient.Core.IApiClient.ObtenerTerminales()']]],
+  ['obtenerturnos',['ObtenerTurnos',['../class_pasamonte_1_1_api_client_1_1_api_client.html#a29832d0f5767f50f115953e954541612',1,'Pasamonte.ApiClient.ApiClient.ObtenerTurnos()'],['../interface_pasamonte_1_1_api_client_1_1_core_1_1_i_api_client.html#a62eadcd734379d0d49cf82ef472eadcf',1,'Pasamonte.ApiClient.Core.IApiClient.ObtenerTurnos()']]]
+];
