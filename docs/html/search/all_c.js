@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['readme',['README',['../md__c_1__pasamonte_psl-apiclient__r_e_a_d_m_e.html',1,'']]],
   ['rceautenticar',['RceAutenticar',['../class_pasamonte_1_1_api_client_1_1_api_client.html#a17612ae53c5baa863e67a778464eadf4',1,'Pasamonte.ApiClient.ApiClient.RceAutenticar()'],['../interface_pasamonte_1_1_api_client_1_1_core_1_1_i_api_client.html#a3749e56ee66c9e098f4328c9f3b12870',1,'Pasamonte.ApiClient.Core.IApiClient.RceAutenticar()']]],
   ['rcecambiarclave',['RceCambiarClave',['../class_pasamonte_1_1_api_client_1_1_api_client.html#a90dbf43787de59828ee32c2587338ce9',1,'Pasamonte.ApiClient.ApiClient.RceCambiarClave()'],['../interface_pasamonte_1_1_api_client_1_1_core_1_1_i_api_client.html#a8f41570e9d50e10dbeb120fc693551d1',1,'Pasamonte.ApiClient.Core.IApiClient.RceCambiarClave()']]],
   ['rcecancelarcita',['RceCancelarCita',['../class_pasamonte_1_1_api_client_1_1_api_client.html#aa0a4ab5bcf7778b4dabcfce74dbf628f',1,'Pasamonte.ApiClient.ApiClient.RceCancelarCita()'],['../interface_pasamonte_1_1_api_client_1_1_core_1_1_i_api_client.html#ad259dfff75f92560573298982ff51e8a',1,'Pasamonte.ApiClient.Core.IApiClient.RceCancelarCita()']]],

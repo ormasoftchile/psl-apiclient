@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>psl-apiclient: Fichero Fuente C:/Pasamonte/psl-apiclient/Pasamonte.ApiClient.Core/Dto/ItemEntrega.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_pasamonte_black_firma.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">psl-apiclient
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Paquetes</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2b650f248ea56901ab1d20a119f9a284.html">Pasamonte.ApiClient.Core</a></li><li class="navelem"><a class="el" href="dir_6191eb307b783bba0c1493801e24e18a.html">Dto</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">ItemEntrega.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Runtime.Serialization;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Text;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Threading.Tasks;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_pasamonte.html">Pasamonte</a>.<a class="code" href="namespace_api_client.html">ApiClient</a>.Core.Dto</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html">ItemEntrega</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#a874a3935e458f4e43c3f81b1d59a35fa">   18</a></span>&#160;        <span class="keyword">public</span> Guid Id { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#aee37f07d174d3518014ec44e89b745f0">   25</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> IdEnSistemaExterno { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#a0a9870dc790436219a197bbd72502154">   30</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> CantidadEntregar { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        </div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#aba629ee625010a1e07b1fc4a1eb29422">   35</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> CantidadEntregada { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#afdad5d8130909aeacf8700b0e2eff417">   40</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> StockRCE { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#ad6ee70d093fecebbfc21925bbe3d7569">   45</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> DescripcionEntrega { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#a689a0214522a739fbbc69278a7dd2232">   50</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> ObservacionEntrega { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#afadb517ad29a392abb22b03e1e3ce372">   55</a></span>&#160;        <span class="keyword">public</span> Guid EntregaId { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#a000783d69bf6c4eec0e039b3b0843f0d">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> IdentificadorProducto { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#a994931ddde32f8b5996ba2f27d53fd27">   65</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> DescripcionProducto { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#a2424f27a78de2ec327b27347a2a3df57">   70</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> UnidadDispensacion { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html#a95e5ed21ab0e41542500d00d05aabcf7">   75</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> EsSustituible { <span class="keyword">get</span>; set; }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_api_client_html"><div class="ttname"><a href="namespace_api_client.html">ApiClient</a></div></div>
+<div class="ttc" id="namespace_pasamonte_html"><div class="ttname"><a href="namespace_pasamonte.html">Pasamonte</a></div></div>
+<div class="ttc" id="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega_html"><div class="ttname"><a href="class_pasamonte_1_1_api_client_1_1_core_1_1_dto_1_1_item_entrega.html">Pasamonte.ApiClient.Core.Dto.ItemEntrega</a></div><div class="ttdoc">Representa un nodo de la red </div><div class="ttdef"><b>Definition:</b> <a href="_item_entrega_8cs_source.html#l00013">ItemEntrega.cs:13</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Martes, 14 de Abril de 2015 17:26:51 para psl-apiclient por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

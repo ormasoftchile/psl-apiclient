@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.9.1"/>
+<title>psl-apiclient: Fichero Fuente C:/Pasamonte/psl-apiclient/Pasamonte.ApiClient.Core/StatusLlamada.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_pasamonte_black_firma.png"/></td>
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">psl-apiclient
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.9.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="namespaces.html"><span>Paquetes</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_2b650f248ea56901ab1d20a119f9a284.html">Pasamonte.ApiClient.Core</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">StatusLlamada.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_pasamonte.html">Pasamonte</a>.<a class="code" href="namespace_api_client.html">ApiClient</a>.Core</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">    #region StatusLlamada</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44f">StatusLlamada</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44faa60852f204ed8028c1c58808b746d115">Ok</a> = 0,</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa9d2abb1b6ef61501ff710e664146482e">ErrorDesconocido</a> = 1,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa168ff6ba7b2f40ea564f9086df955a9d">UsuarioNoAutorizado</a> = 50,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fada121dac327ddaeb1a1d5e9e55e6b615">NoExisteCodigoEstablecimiento</a> = 101,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa6e9ff171f59852d6e6847ccc251aacb8">NoExisteIdSitioInforma</a> = 102,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fabd52283a5f5b01728b3cb34b821bf026">NoExisteIdSoftwareInforma</a> = 103,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44faa00fcd1b43023ffc17c5c42b6aea502c">FechaHoraNoValida</a> = 110,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa93c0cba60d82b3a6fb1e46d9dc2f8562">FechaHoraFuturo</a> = 111,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa10f2ac62f09f45a67b294adae895d4c0">NoExisteEntrega</a> = 200,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa474940fa8f449f08e2b049284f0d0e9d">EstablecimientoSinTerminales</a> = 201,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fae226f1370eb52e21a570463508a2003a">NoExisteCodigoTerminal</a> = 202,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa07c8df0b68b9c633e89fb4b244466a87">NoSeEspecificanOperaciones</a> = 300,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa8499104ca83c68be5392d391d79202a9">DemasiadasOperaciones</a> = 301,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa19411e0a000802aecb7075b37158c2e4">NoExisteCodigoProducto</a> = 302,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa85a4f9de0a12f1d47f0e879b6f253e7e">NoExisteItemEntrega</a> = 303,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa3a8a193293f6cdc7a84e18e35fcc8bda">ErrorCantidadDispensada</a> = 304,</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa944b439e81d7ae88074fb19f469a86cf">ErrorUnidadDispensada</a> = 305,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa87993805d47905be72df8111b968d1ed">ErrorEstadoReceta</a> = 306,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa9e5bcacdee8629719bcf0e49c031b51b">ErrorCitaNoExiste</a> = 400</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">    #endregion</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa87993805d47905be72df8111b968d1ed"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa87993805d47905be72df8111b968d1ed">Pasamonte.ApiClient.Core.ErrorEstadoReceta</a></div><div class="ttdoc">ErrorEstadoReceta - el estado de la receta no es válido o bien no es válido para realizar operaciones...</div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44faa60852f204ed8028c1c58808b746d115"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44faa60852f204ed8028c1c58808b746d115">Pasamonte.ApiClient.Core.Ok</a></div><div class="ttdoc">Ok - llamada exitosa </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa3a8a193293f6cdc7a84e18e35fcc8bda"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa3a8a193293f6cdc7a84e18e35fcc8bda">Pasamonte.ApiClient.Core.ErrorCantidadDispensada</a></div><div class="ttdoc">ErrorCantidadDispensada - error en la cantidad dispensada </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa07c8df0b68b9c633e89fb4b244466a87"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa07c8df0b68b9c633e89fb4b244466a87">Pasamonte.ApiClient.Core.NoSeEspecificanOperaciones</a></div><div class="ttdoc">No se especificó ninguna operación de actualización del arsenal. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa474940fa8f449f08e2b049284f0d0e9d"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa474940fa8f449f08e2b049284f0d0e9d">Pasamonte.ApiClient.Core.EstablecimientoSinTerminales</a></div><div class="ttdoc">Se solicita consultar sobre un establecimiento que no posee terminales de dispensación. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa93c0cba60d82b3a6fb1e46d9dc2f8562"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa93c0cba60d82b3a6fb1e46d9dc2f8562">Pasamonte.ApiClient.Core.FechaHoraFuturo</a></div><div class="ttdoc">FechaHoraMensajeFuturo - la fecha - hora del mensaje está en el futuro. (error) </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa9e5bcacdee8629719bcf0e49c031b51b"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa9e5bcacdee8629719bcf0e49c031b51b">Pasamonte.ApiClient.Core.ErrorCitaNoExiste</a></div><div class="ttdoc">ErrorCitaNoExiste - la cita referida por el identificador no existe. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fada121dac327ddaeb1a1d5e9e55e6b615"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fada121dac327ddaeb1a1d5e9e55e6b615">Pasamonte.ApiClient.Core.NoExisteCodigoEstablecimiento</a></div><div class="ttdoc">El código del establecimiento no está presente en la base de datos de Pasamonte. </div></div>
+<div class="ttc" id="namespace_api_client_html"><div class="ttname"><a href="namespace_api_client.html">ApiClient</a></div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa10f2ac62f09f45a67b294adae895d4c0"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa10f2ac62f09f45a67b294adae895d4c0">Pasamonte.ApiClient.Core.NoExisteEntrega</a></div><div class="ttdoc">La entrega referenciada no se encuentra. </div></div>
+<div class="ttc" id="namespace_pasamonte_html"><div class="ttname"><a href="namespace_pasamonte.html">Pasamonte</a></div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa168ff6ba7b2f40ea564f9086df955a9d"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa168ff6ba7b2f40ea564f9086df955a9d">Pasamonte.ApiClient.Core.UsuarioNoAutorizado</a></div><div class="ttdoc">UsuarioNoAutorizado - las credenciales provistas no non válidas en el sistema remoto. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fabd52283a5f5b01728b3cb34b821bf026"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fabd52283a5f5b01728b3cb34b821bf026">Pasamonte.ApiClient.Core.NoExisteIdSoftwareInforma</a></div><div class="ttdoc">El código del software no ha sido registrado en la base de datos de Pasamonte. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fae226f1370eb52e21a570463508a2003a"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fae226f1370eb52e21a570463508a2003a">Pasamonte.ApiClient.Core.NoExisteCodigoTerminal</a></div><div class="ttdoc">NoExisteCodigoTerminal - el codigo de terminal especificado no existe. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44f"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44f">Pasamonte.ApiClient.Core.StatusLlamada</a></div><div class="ttdeci">StatusLlamada</div><div class="ttdoc">StatusLlamada - códigos de resultado de operaciones de integración. </div><div class="ttdef"><b>Definition:</b> <a href="_status_llamada_8cs_source.html#l00008">StatusLlamada.cs:8</a></div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa85a4f9de0a12f1d47f0e879b6f253e7e"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa85a4f9de0a12f1d47f0e879b6f253e7e">Pasamonte.ApiClient.Core.NoExisteItemEntrega</a></div><div class="ttdoc">NoExisteItemEntrega - el código del item de la entrega (prescripción) no existe. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa19411e0a000802aecb7075b37158c2e4"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa19411e0a000802aecb7075b37158c2e4">Pasamonte.ApiClient.Core.NoExisteCodigoProducto</a></div><div class="ttdoc">El código o identificador de producto referenciado no existe en la base de datos de Pasamonte...</div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa944b439e81d7ae88074fb19f469a86cf"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa944b439e81d7ae88074fb19f469a86cf">Pasamonte.ApiClient.Core.ErrorUnidadDispensada</a></div><div class="ttdoc">ErrorUnidadDispensada - error en la unidad dispensada </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa9d2abb1b6ef61501ff710e664146482e"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa9d2abb1b6ef61501ff710e664146482e">Pasamonte.ApiClient.Core.ErrorDesconocido</a></div><div class="ttdoc">ErrorDesconocido - ha ocurrido un error de causa desconocida que ha impedido ejecutar la operación...</div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44faa00fcd1b43023ffc17c5c42b6aea502c"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44faa00fcd1b43023ffc17c5c42b6aea502c">Pasamonte.ApiClient.Core.FechaHoraNoValida</a></div><div class="ttdoc">FechaHoraMensajeNoValida - la fecha - hora del mensaje no es válida (formato). </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa6e9ff171f59852d6e6847ccc251aacb8"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa6e9ff171f59852d6e6847ccc251aacb8">Pasamonte.ApiClient.Core.NoExisteIdSitioInforma</a></div><div class="ttdoc">El código de la empresa no ha sido registrado en la base de datos de Pasamonte. </div></div>
+<div class="ttc" id="namespace_pasamonte_1_1_api_client_1_1_core_html_a315c54c741c3845fa9dea526f31df44fa8499104ca83c68be5392d391d79202a9"><div class="ttname"><a href="namespace_pasamonte_1_1_api_client_1_1_core.html#a315c54c741c3845fa9dea526f31df44fa8499104ca83c68be5392d391d79202a9">Pasamonte.ApiClient.Core.DemasiadasOperaciones</a></div><div class="ttdoc">Se especificaron más de 100 operaciones de modificación del arsenal. </div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado el Martes, 14 de Abril de 2015 17:26:51 para psl-apiclient por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.9.1
+</small></address>
+</body>
+</html>

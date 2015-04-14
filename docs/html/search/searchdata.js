@@ -6,7 +6,8 @@ var indexSectionsWithContent =
   3: "eimor",
   4: "cest",
   5: "acdefnotu",
-  6: "abcdefimnopstu"
+  6: "abcdefimnopstu",
+  7: "r"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "functions",
   4: "enums",
   5: "enumvalues",
-  6: "properties"
+  6: "properties",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Funciones",
   4: "Enumeraciones",
   5: "Valores de enumeraciones",
-  6: "Propiedades"
+  6: "Propiedades",
+  7: "Páginas"
 };
 

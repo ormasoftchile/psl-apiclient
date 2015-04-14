@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>psl-apiclient: #psl-apiclient</title>
+<title>psl-apiclient: README</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,6 +22,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="logo_pasamonte_black_firma.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">psl-apiclient
    </div>
@@ -41,6 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
       <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="namespaces.html"><span>Paquetes</span></a></li>
       <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -76,10 +78,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">#psl-apiclient </div>  </div>
+<div class="title">README </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Biblioteca .NET que permite acceder a los servicios de la API <a class="el" href="namespace_pasamonte.html">Pasamonte</a> Labs. Encapsula invocaciones REST a través de una biblioteca de clases, facilitando realizar la integración con los servicios.</p>
+<div class="textblock"><p>#psl-apiclient Biblioteca .NET que permite acceder a los servicios de la API <a class="el" href="namespace_pasamonte.html">Pasamonte</a> Labs. Encapsula invocaciones REST a través de una biblioteca de clases, facilitando realizar la integración con los servicios. El servicio REST también es accesible a través de HTTP. En la parte inferior de esta descripción se presentan ejemplos de invocaciones utilizando el utilitario de comandos <em>curl</em>.</p>
 <h2>Los servicios disponibles se enmarcan en dos categorías:</h2>
 <h3>Integración con Registro Clínico Electrónico (RCE). (Actualmente se implementa la interoperabilidad con la plataforma SAYDEX).</h3>
 <ul>
@@ -90,9 +92,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <h3>Integración con operaciones de</h3>
 <ul>
 <li>Citas médicas</li>
-<li>Administración de turnos</li>
+<li>Administración de turnos (Servicios, Módulos, Turnos)</li>
 </ul>
-<h3>Métodos de la interfaz</h3>
+<h3>Funcionalidades del servicio</h3>
 <ul>
 <li>RceAutenticar</li>
 <li>RceCambiarClave</li>
@@ -111,12 +113,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 <li>RegistrarTurno</li>
 <li>EliminarTurno</li>
 <li>ObtenerTurnos</li>
-<li>ObtenerTerminales </li>
+<li>ObtenerTerminales</li>
+</ul>
+<h3>Vea la documentación de los objetos en <a href="http://pasamonte.github.io/docs/psl-apiclient">Docs psl-apiclient</a></h3>
+<h2>Uso de los métodos desde línea de comandos</h2>
+<p>Se puede acceder a los métodos utilizando <em>curl</em> desde la línea de comandos, siguiendo los parámetros indicados en la documentación de cada método. En cada llamada se debe proveer el parámetro <b>apiKey</b> y debe invocarse utilizando el verbo <b>POST</b>.</p>
+<p><b>Ejemplo:</b></p><ul>
+<li>Para obtener una lista de los terminales registrados en el sistema, un comando posible es: ``` curl -H "Content-Type: application/json" -i \ -X POST <a href="http://ppi.cloudapp.net/api/adm/obtenerterminales">http://ppi.cloudapp.net/api/adm/obtenerterminales</a> \ -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \
+           'idTerminal': 'a34287f8-102a-4cf3-bace-153c30c3eb58' }" ```</li>
+<li>Para obtener los datos de un terminal específico, se agrega el id del terminal como parámetro: ``` curl -H "Content-Type: application/json" -i \ -X POST <a href="http://ppi.cloudapp.net/api/adm/obtenerterminales">http://ppi.cloudapp.net/api/adm/obtenerterminales</a> \ -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \ 'idTerminal': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \ 'id': '7a873d2f-181d-4c23-90c4-176897f47382' }" ```</li>
+<li>Para crear un servicio, debemos proveer los siguientes parámetros: ``` +--------------------------------------------------------------------------------------------------&mdash;+ | parámetro | opcional | valor por defecto | ejemplo | +--------------------------------------------------------------------------------------------------&mdash;+ | id | sí | &lt;nulo&gt; | 75e48afb-25dd-447a-a864-15992ec070b4 | +--------------------------------------------------------------------------------------------------&mdash;+ | titulo | no | | servicio de prueba | +--------------------------------------------------------------------------------------------------&mdash;+ | activo | no | | true | +--------------------------------------------------------------------------------------------------&mdash;+ | bloqueado | no | | false | +--------------------------------------------------------------------------------------------------&mdash;+ | idNodo | no | | f36a323c-3c20-42eb-811c-4e84668adade | +--------------------------------------------------------------------------------------------------&mdash;+ | configuracionJson | sí | &lt;nulo&gt; | | +--------------------------------------------------------------------------------------------------&mdash;+ | tipoDeToken | no | | numerico | +--------------------------------------------------------------------------------------------------&mdash;+ | tokenMaximoCorrelativo | no | | 100 | +--------------------------------------------------------------------------------------------------&mdash;+ | ultimoTokenGenerado | sí | &lt;nulo&gt; | 1 | +--------------------------------------------------------------------------------------------------&mdash;+ | prioridadVisual | no | | alta | +--------------------------------------------------------------------------------------------------&mdash;+ ``` el comando resultante sería: ``` curl -H "Content-Type: application/json" -i \ -X POST <a href="http://ppi.cloudapp.net/api/adm/registrarservicio">http://ppi.cloudapp.net/api/adm/registrarservicio</a> \ -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \ 'id': '75e48afb-25dd-447a-a864-15992ec070b4', \ 'titulo': 'servicio de prueba', \ 'activo': 'true', \ 'bloqueado': 'false', \ 'idNodo': 'f36a323c-3c20-42eb-811c-4e84668adade', \ 'configuracionJson': '', \ 'tipoDeToken': 'numerico', \ 'tokenMaximoCorrelativo': '100', \ 'ultimoTokenGenerado': 1, \ 'prioridadVisual': 'alta' }" ```</li>
+<li>Para revisar los datos del servicio que registramos, podemos ejecutar: ``` curl -H "Content-Type: application/json" -i \ -X POST <a href="http://ppi.cloudapp.net/api/adm/obtenerservicios">http://ppi.cloudapp.net/api/adm/obtenerservicios</a> \ -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \
+           'id': '75e48afb-25dd-447a-a864-15992ec070b4' }" ``` </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generado el Martes, 14 de Abril de 2015 16:04:37 para psl-apiclient por &#160;<a href="http://www.doxygen.org/index.html">
+Generado el Martes, 14 de Abril de 2015 17:26:51 para psl-apiclient por &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.9.1
 </small></address>
