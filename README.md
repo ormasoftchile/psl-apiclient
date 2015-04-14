@@ -13,4 +13,23 @@ Encapsula invocaciones REST a través de una biblioteca de clases, facilitando r
 ###Integración con operaciones de
 * Citas médicas
 * Administración de turnos
- 
+
+###Métodos de la interfaz
+* RceAutenticar
+* RceCambiarClave
+* RceObtenerEntregas
+* RceNotificarEntrega
+* RceRegistrarCita
+* RceConfirmarCita
+* RceCancelarCita
+* RceObtenerCitas
+* RegistrarServicio
+* EliminarServicio
+* ObtenerServicios
+* RegistrarModulo
+* EliminarModulo
+* ObtenerModulos
+* RegistrarTurno
+* EliminarTurno
+* ObtenerTurnos
+* ObtenerTerminales
