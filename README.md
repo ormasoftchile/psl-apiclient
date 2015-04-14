@@ -42,19 +42,20 @@ En cada llamada se debe proveer el parámetro apiKey y debe invocarse utilizando
 
 Ejemplo:
 * Para obtener una lista de los terminales registrados en el sistema, un comando posible es:
-
+```
 curl -H "Content-Type: application/json" -i \
      -X POST http://ppi.cloudapp.net/api/adm/obtenerterminales \
      -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \
            'idTerminal': 'a34287f8-102a-4cf3-bace-153c30c3eb58' }"
-           
+```           
 * Para obtener los datos de un terminal específico, se agrega el id del terminal como parámetro:
+```
 curl -H "Content-Type: application/json" -i \
      -X POST http://ppi.cloudapp.net/api/adm/obtenerterminales \
      -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \
            'idTerminal': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \
            'id': '7a873d2f-181d-4c23-90c4-176897f47382' }"
-
+```
 * Para crear un servicio, debemos proveer los siguientes parámetros:
 ```
 +-----------------------------------------------------------------------------------------------------+
@@ -82,7 +83,7 @@ curl -H "Content-Type: application/json" -i \
 +-----------------------------------------------------------------------------------------------------+
 ```
 el comando resultante sería:
-
+```
 curl -H "Content-Type: application/json" -i \
      -X POST http://ppi.cloudapp.net/api/adm/registrarservicio \
      -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \
@@ -96,10 +97,11 @@ curl -H "Content-Type: application/json" -i \
            'tokenMaximoCorrelativo': '100', \
            'ultimoTokenGenerado': 1, \
            'prioridadVisual': 'alta' }"
-
+```
 * Para revisar los datos del servicio que registramos, podemos ejecutar:
-
+```
 curl -H "Content-Type: application/json" -i \
      -X POST http://ppi.cloudapp.net/api/adm/obtenerservicios \
      -d "{ 'apiKey': 'a34287f8-102a-4cf3-bace-153c30c3eb58', \
            'id': '75e48afb-25dd-447a-a864-15992ec070b4' }"
+```
