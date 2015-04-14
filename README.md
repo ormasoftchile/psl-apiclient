@@ -33,3 +33,6 @@ Encapsula invocaciones REST a través de una biblioteca de clases, facilitando r
 * EliminarTurno
 * ObtenerTurnos
 * ObtenerTerminales
+
+###Vea la documentación de los objetos en
+http://pasamonte.github.io/docs/psl-apiclient/index.html
