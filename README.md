@@ -56,7 +56,7 @@ curl -H "Content-Type: application/json" -i \
            'id': '7a873d2f-181d-4c23-90c4-176897f47382' }"
 
 * Para crear un servicio, debemos proveer los siguientes parámetros:
-`
+```
 +-----------------------------------------------------------------------------------------------------+
 | parámetro              |  opcional |  valor por defecto   |                 ejemplo                 |
 +-----------------------------------------------------------------------------------------------------+
@@ -80,7 +80,7 @@ curl -H "Content-Type: application/json" -i \
 +-----------------------------------------------------------------------------------------------------+
 |     prioridadVisual    |     no    |                      | alta                                    |
 +-----------------------------------------------------------------------------------------------------+
-`
+```
 el comando resultante sería:
 
 curl -H "Content-Type: application/json" -i \
