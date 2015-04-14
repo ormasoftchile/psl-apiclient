@@ -34,14 +34,13 @@ El servicio REST también es accesible a través de HTTP. En la parte inferior d
 * ObtenerTurnos
 * ObtenerTerminales
 
-###Vea la documentación de los objetos en
-http://pasamonte.github.io/docs/psl-apiclient
+###Vea la documentación de los objetos en [Docs psl-apiclient](http://pasamonte.github.io/docs/psl-apiclient)
 
 ##Uso de los métodos desde línea de comandos
 Se puede acceder a los métodos utilizando *curl* desde la línea de comandos, siguiendo los parámetros indicados en la documentación de cada método.
 En cada llamada se debe proveer el parámetro **apiKey** y debe invocarse utilizando el verbo **POST**.
 
-Ejemplo:
+**Ejemplo:**
 * Para obtener una lista de los terminales registrados en el sistema, un comando posible es:
 ```
 curl -H "Content-Type: application/json" -i \
