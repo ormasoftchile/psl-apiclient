@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.9.1"/>
-<title>psl-apiclient: Lista de los miembros</title>
+<title>psl-apiclient: #psl-apiclient</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -38,9 +38,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Página&#160;principal</span></a></li>
-      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li class="current"><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
       <li><a href="namespaces.html"><span>Paquetes</span></a></li>
-      <li class="current"><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -59,14 +59,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
       </li>
     </ul>
   </div>
-  <div id="navrow2" class="tabs2">
-    <ul class="tablist">
-      <li><a href="annotated.html"><span>Lista&#160;de&#160;clases</span></a></li>
-      <li><a href="classes.html"><span>Índice&#160;de&#160;clases</span></a></li>
-      <li><a href="hierarchy.html"><span>Jerarquía&#160;de&#160;la&#160;clase</span></a></li>
-      <li><a href="functions.html"><span>Miembros&#160;de&#160;las&#160;clases</span></a></li>
-    </ul>
-  </div>
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -81,21 +73,47 @@ var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="namespace_api_client.html">ApiClient</a></li><li class="navelem"><a class="el" href="namespace_api_client_1_1_tests.html">Tests</a></li><li class="navelem"><a class="el" href="class_api_client_1_1_tests_1_1_unit_test1.html">UnitTest1</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">ApiClient.Tests.UnitTest1 Lista de los miembros</div>  </div>
+<div class="title">#psl-apiclient </div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Lista completa de los miembros de <a class="el" href="class_api_client_1_1_tests_1_1_unit_test1.html">ApiClient.Tests.UnitTest1</a>, incluyendo todos los heredados:</p>
-<table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TestMethod1</b>() (definido en <a class="el" href="class_api_client_1_1_tests_1_1_unit_test1.html">ApiClient.Tests.UnitTest1</a>)</td><td class="entry"><a class="el" href="class_api_client_1_1_tests_1_1_unit_test1.html">ApiClient.Tests.UnitTest1</a></td><td class="entry"></td></tr>
-</table></div><!-- contents -->
+<div class="textblock"><p>Biblioteca .NET que permite acceder a los servicios de la API <a class="el" href="namespace_pasamonte.html">Pasamonte</a> Labs. Encapsula invocaciones REST a través de una biblioteca de clases, facilitando realizar la integración con los servicios.</p>
+<h2>Los servicios disponibles se enmarcan en dos categorías:</h2>
+<h3>Integración con Registro Clínico Electrónico (RCE). (Actualmente se implementa la interoperabilidad con la plataforma SAYDEX).</h3>
+<ul>
+<li>Validación de usuarios (pacientes) en plataforma RCE.</li>
+<li>Obtención de recetas con despachos pendientes desde RCE.</li>
+<li>Registro (notificación) de despachos realizados a RCE.</li>
+</ul>
+<h3>Integración con operaciones de</h3>
+<ul>
+<li>Citas médicas</li>
+<li>Administración de turnos</li>
+</ul>
+<h3>Métodos de la interfaz</h3>
+<ul>
+<li>RceAutenticar</li>
+<li>RceCambiarClave</li>
+<li>RceObtenerEntregas</li>
+<li>RceNotificarEntrega</li>
+<li>RceRegistrarCita</li>
+<li>RceConfirmarCita</li>
+<li>RceCancelarCita</li>
+<li>RceObtenerCitas</li>
+<li>RegistrarServicio</li>
+<li>EliminarServicio</li>
+<li>ObtenerServicios</li>
+<li>RegistrarModulo</li>
+<li>EliminarModulo</li>
+<li>ObtenerModulos</li>
+<li>RegistrarTurno</li>
+<li>EliminarTurno</li>
+<li>ObtenerTurnos</li>
+<li>ObtenerTerminales </li>
+</ul>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generado el Martes, 14 de Abril de 2015 16:04:37 para psl-apiclient por &#160;<a href="http://www.doxygen.org/index.html">
