@@ -1,5 +1,4 @@
 #psl-apiclient
-=============
 Biblioteca .NET que permite acceder a los servicios de la API Pasamonte Labs.
 Encapsula invocaciones REST a través de una biblioteca de clases, facilitando realizar la integración con los servicios.
 
