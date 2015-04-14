@@ -1,6 +1,7 @@
 #psl-apiclient
 Biblioteca .NET que permite acceder a los servicios de la API Pasamonte Labs.
 Encapsula invocaciones REST a través de una biblioteca de clases, facilitando realizar la integración con los servicios.
+El servicio REST también es accesible a través de HTTP. En la parte inferior de esta descripción se presentan ejemplos de invocaciones utilizando el utilitario de comandos curl.
 
 ##Los servicios disponibles se enmarcan en dos categorías:
 
@@ -11,9 +12,9 @@ Encapsula invocaciones REST a través de una biblioteca de clases, facilitando r
 
 ###Integración con operaciones de
 * Citas médicas
-* Administración de turnos
+* Administración de turnos (Servicios, Módulos, Turnos)
 
-###Métodos de la interfaz
+###Funcionalidades del servicio
 * RceAutenticar
 * RceCambiarClave
 * RceObtenerEntregas
