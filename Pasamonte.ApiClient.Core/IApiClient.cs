@@ -163,11 +163,11 @@ namespace Pasamonte.ApiClient.Core
         #region servicios
         #region RegistrarServicio
         /// <summary>
-        /// RegistrarServicio - registra una Servicio de un paciente.
+        /// RegistrarServicio - registra un servicio de atención.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="servicio">Id de la Servicio</param>
+        /// <param name="servicio">Id del servicio</param>
         Task<RespuestaRegistrarServicio> RegistrarServicio
             (
                 string url,
@@ -177,11 +177,11 @@ namespace Pasamonte.ApiClient.Core
         #endregion
         #region EliminarServicio
         /// <summary>
-        /// EliminarServicio - Cancela una Servicio de un paciente.
+        /// EliminarServicio - Elimina un servicio de atención.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="idServicio">Id de la Servicio</param>
+        /// <param name="idServicio">Id del servicio</param>
         Task<RespuestaEliminarServicio> EliminarServicio
             (
                 string url,
@@ -191,13 +191,13 @@ namespace Pasamonte.ApiClient.Core
         #endregion
         #region ObtenerServicios
         /// <summary>
-        /// ObtenerServicios - obtiene las Servicios pendientes para un paciente o un nodo asociado
+        /// ObtenerServicios - obtiene los servicios de atención de acuerdo a los criterios de filtro.
         /// a un terminal.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="query">Query con criterios de seleccion de Servicios</param>
-        /// <returns>Objeto con datos de las Servicios <see cref="RespuestaObtenerServicios"/></returns>
+        /// <param name="query">Query con criterios de seleccion de servicios</param>
+        /// <returns>Objeto con datos de los servicios <see cref="RespuestaObtenerServicios"/></returns>
         Task<RespuestaObtenerServicios> ObtenerServicios
             (
                 string url,
@@ -209,11 +209,11 @@ namespace Pasamonte.ApiClient.Core
         #region modulos
         #region RegistrarModulo
         /// <summary>
-        /// RegistrarModulo - registra una cita de un paciente.
+        /// RegistrarModulo - registra un módulo de atención.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="modulo">Id de la Modulo</param>
+        /// <param name="modulo">Id del módulo</param>
         Task<RespuestaRegistrarModulo> RegistrarModulo
             (
                 string url,
@@ -223,11 +223,11 @@ namespace Pasamonte.ApiClient.Core
         #endregion
         #region EliminarModulo
         /// <summary>
-        /// EliminarModulo - Cancela una cita de un paciente.
+        /// EliminarModulo - elimina un módulo de atención.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="idModulo">Id de la Modulo</param>
+        /// <param name="idModulo">Id del módulo</param>
         Task<RespuestaEliminarModulo> EliminarModulo
             (
                 string url,
@@ -237,13 +237,13 @@ namespace Pasamonte.ApiClient.Core
         #endregion
         #region ObtenerModulos
         /// <summary>
-        /// ObtenerModulos - obtiene las citas pendientes para un paciente o un nodo asociado
+        /// ObtenerModulos - obtiene los módulos de atención de acuerdo a criterios de filtro.
         /// a un terminal.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="query">Query con criterios de seleccion de citas</param>
-        /// <returns>Objeto con datos de las citas <see cref="RespuestaObtenerModulos"/></returns>
+        /// <param name="query">Query con criterios de seleccion de módulos</param>
+        /// <returns>Objeto con datos de los módulos<see cref="RespuestaObtenerModulos"/></returns>
         Task<RespuestaObtenerModulos> ObtenerModulos
             (
                 string url,
@@ -255,11 +255,11 @@ namespace Pasamonte.ApiClient.Core
         #region turnos
         #region RegistrarTurno
         /// <summary>
-        /// RegistrarTurno - registra una Turno de un paciente.
+        /// RegistrarTurno - registra una turno de atención.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="turno">Id de la Turno</param>
+        /// <param name="turno">Id del turno creado.</param>
         Task<RespuestaRegistrarTurno> RegistrarTurno
             (
                 string url,
@@ -269,11 +269,11 @@ namespace Pasamonte.ApiClient.Core
         #endregion
         #region EliminarTurno
         /// <summary>
-        /// EliminarTurno - Cancela una Turno de un paciente.
+        /// EliminarTurno - elimina un turno de atención.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="idTurno">Id de la Turno</param>
+        /// <param name="idTurno">Id del turno.</param>
         Task<RespuestaEliminarTurno> EliminarTurno
             (
                 string url,
@@ -283,13 +283,13 @@ namespace Pasamonte.ApiClient.Core
         #endregion
         #region ObtenerTurnos
         /// <summary>
-        /// ObtenerTurnos - obtiene las Turnos pendientes para un paciente o un nodo asociado
+        /// ObtenerTurnos - obtiene los turnos de acuerdo a criterios de filtro.
         /// a un terminal.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="query">Query con criterios de seleccion de Turnos</param>
-        /// <returns>Objeto con datos de las Turnos <see cref="RespuestaObtenerTurnos"/></returns>
+        /// <param name="query">Query con criterios de seleccion de los turnos</param>
+        /// <returns>Objeto con datos de los turnos.<see cref="RespuestaObtenerTurnos"/></returns>
         Task<RespuestaObtenerTurnos> ObtenerTurnos
             (
                 string url,
@@ -300,13 +300,13 @@ namespace Pasamonte.ApiClient.Core
         #endregion
         #region ObtenerTerminales
         /// <summary>
-        /// ObtenerTerminales - obtiene las Terminales pendientes para un paciente o un nodo asociado
+        /// ObtenerTerminales - obtiene los terminales de acuerdo al criterio de filtro.
         /// a un terminal.
         /// </summary>
         /// <param name="url">Url del servidor Pasamonte.</param>
         /// <param name="apiKey">Clave de integración.</param>
-        /// <param name="query">Query con criterios de seleccion de Terminales</param>
-        /// <returns>Objeto con datos de las Terminales <see cref="RespuestaObtenerTerminales"/></returns>
+        /// <param name="query">Query con criterios de seleccion de terminales</param>
+        /// <returns>Objeto con datos de los terminales <see cref="RespuestaObtenerTerminales"/></returns>
         Task<RespuestaObtenerTerminales> ObtenerTerminales
             (
                 string url,
