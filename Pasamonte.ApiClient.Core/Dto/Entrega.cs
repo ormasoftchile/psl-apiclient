@@ -40,7 +40,7 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// </summary>        
         public Guid PersonaId { get; set; }
 
-        public Persona Persona { get; set; }
+        public Paciente Persona { get; set; }
 
         public bool Despachada { get; set; }
 

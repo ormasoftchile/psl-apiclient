@@ -54,7 +54,7 @@
     <Compile Include="Dto\Modulo.cs" />
     <Compile Include="Dto\Nodo.cs" />
     <Compile Include="Dto\Notificacion.cs" />
-    <Compile Include="Dto\Persona.cs" />
+    <Compile Include="Dto\Paciente.cs" />
     <Compile Include="Dto\QueryObtenerCitas.cs" />
     <Compile Include="Dto\QueryObtenerTerminales.cs" />
     <Compile Include="Dto\QueryObtenerModulos.cs" />
@@ -81,6 +81,7 @@
     <Compile Include="Dto\Servicio.cs" />
     <Compile Include="Dto\TipoNotificacion.cs" />
     <Compile Include="Dto\Turno.cs" />
+    <Compile Include="Dto\TypePacienteLight.cs" />
     <Compile Include="IApiClient.cs" />
     <Compile Include="RespuestaApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

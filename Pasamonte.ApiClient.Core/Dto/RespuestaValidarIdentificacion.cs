@@ -11,5 +11,6 @@ namespace Pasamonte.ApiClient.Core.Dto
         public bool Validado { get; set; }
         public string Token { get; set; }
         public string Data { get; set; }
+        public TypePacienteLight Paciente { get; set; }
     }
 }

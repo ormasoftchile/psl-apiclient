@@ -21,7 +21,7 @@ namespace Pasamonte.ApiClient
         const string RceAccionCancelarCita = AdmBaseAccion + "cancelarcita";
         const string RceAccionConfirmarCita = AdmBaseAccion + "confirmarcita";
         const string RceAccionRegistrarCita = AdmBaseAccion + "registrarcita";
-        const string RceAccionObtenerCitas = AdmBaseAccion + "obtenercitas";
+        const string RceAccionObtenerCitas = RceBaseAccion + "obtenercitas";
         const string AdmBaseAccion = "api/adm/";
         const string AdmAccionNotificar = AdmBaseAccion + "notificar";
         const string AccionEliminarModulo = AdmBaseAccion + "eliminarmodulo";

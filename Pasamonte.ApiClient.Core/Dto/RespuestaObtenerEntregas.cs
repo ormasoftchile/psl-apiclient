@@ -15,7 +15,7 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// <summary>
         /// Paciente - datos del paciente.
         /// </summary>
-        public Persona Persona { get; set; }
+        public Paciente Persona { get; set; }
         /// <summary>
         /// Entregas - colección de las entregas (recetas) pendientes para el paciente.
         /// </summary>
