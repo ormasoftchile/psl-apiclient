@@ -8,15 +8,20 @@ namespace Pasamonte.ApiClient.Core.Dto
 {
     public class Cita
     {
-        public string IdentificadorCita { get; set; }
-        public DateTime FechaHoraCita { get; set; }
-        public string Sector { get; set; }
-        public string NombresProfesional { get; set; }
-        public string PrimerApellidoProfesional { get; set; }
-        public int SexoProfesional { get; set; }
-        public string EstadoCita { get; set; }
-        public int IdentificadorPaciente { get; set; }
-        public Paciente Paciente { get; set; }
+        public string identificadorCita { get; set; }
+        public DateTime fechaHoraCita { get; set; }
+        public string sector { get; set; }
+        public string nombresProfesional { get; set; }
+        public string primerApellidoProfesional { get; set; }
+        public int sexoProfesional { get; set; }
+        public string estadoCita { get; set; }
+        public int identificadorPaciente { get; set; }
+        public Paciente paciente { get; set; }
+        public string columna1 { get; set; }
+        public string columna2 { get; set; }
+        public string columna3 { get; set; }
+        public string columna4 { get; set; }
+        public string columna5 { get; set; }
     }
     //public class Cita
     //{
