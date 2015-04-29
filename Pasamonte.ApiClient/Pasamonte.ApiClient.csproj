@@ -56,6 +56,7 @@
     <Compile Include="ApiClient.cs" />
     <Compile Include="ApiClient.EliminarModulo.cs" />
     <Compile Include="ApiClient.EliminarTurno.cs" />
+    <Compile Include="ApiClient.ObtenerTerminalesSync.cs" />
     <Compile Include="ApiClient.ObtenerTerminales.cs" />
     <Compile Include="ApiClient.RceAutenticar.cs" />
     <Compile Include="ApiClient.EliminarServicio.cs" />

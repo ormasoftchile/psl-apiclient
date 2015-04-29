@@ -314,6 +314,22 @@ namespace Pasamonte.ApiClient.Core
                 QueryObtenerTerminales query
             );
         #endregion
+        #region ObtenerTerminales
+        /// <summary>
+        /// ObtenerTerminales - obtiene los terminales de acuerdo al criterio de filtro.
+        /// a un terminal.
+        /// </summary>
+        /// <param name="url">Url del servidor Pasamonte.</param>
+        /// <param name="apiKey">Clave de integración.</param>
+        /// <param name="query">Query con criterios de seleccion de terminales</param>
+        /// <returns>Objeto con datos de los terminales <see cref="RespuestaObtenerTerminales"/></returns>
+        RespuestaObtenerTerminales ObtenerTerminalesSync
+            (
+                string url,
+                string apiKey,
+                QueryObtenerTerminales query
+            );
+        #endregion
         #region AdmNotificar
         Task<RespuestaNotificar> Notificar
             (

@@ -20,7 +20,7 @@ namespace Pasamonte.ApiClient
         /// <param name="apiKey">Clave de integracion</param>
         /// <param name="query">Criterios de seleccion. <see cref="QueryObtenerTerminales"/></param>
         /// <returns>Objeto de respuesta. <see cref="RespuestaObtenerTerminales"/></returns>
-        public async Task<RespuestaObtenerTerminales> ObtenerTerminales
+        public RespuestaObtenerTerminales ObtenerTerminalesSync
             (
                 string url,
                 string apiKey,
@@ -49,18 +49,18 @@ namespace Pasamonte.ApiClient
 
                 try
                 {
-                    var response =
-                        await client.PostAsJsonAsync
+                    var response = 
+                        client.PostAsJsonAsync
                         (
                             AccionObtenerTerminales,
                             requestData
-                        );
+                        ).Result;
                     if (response.IsSuccessStatusCode)
                     {
                         // Get the URI of the created resource.
-                        var r = await response.Content.ReadAsStringAsync();
+                        var r = response.Content.ReadAsStringAsync().Result;
                         respuesta =
-                            await response.Content.ReadAsAsync<RespuestaObtenerTerminales>();
+                            response.Content.ReadAsAsync<RespuestaObtenerTerminales>().Result;
                     }
                     else
                     {
