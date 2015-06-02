@@ -12,7 +12,7 @@ namespace Pasamonte.ApiClient.Core.Dto
     /// </summary>
     public class Paciente
     {
-        public int IdentificadorPaciente { get; set; }
+        public string IdentificadorPaciente { get; set; }
         public string Nombres { get; set; }
         public string PrimerApellido { get; set; }
         public string SegundoApellido { get; set; }

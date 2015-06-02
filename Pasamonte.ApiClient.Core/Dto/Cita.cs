@@ -15,7 +15,7 @@ namespace Pasamonte.ApiClient.Core.Dto
         public string primerApellidoProfesional { get; set; }
         public int sexoProfesional { get; set; }
         public string estadoCita { get; set; }
-        public int identificadorPaciente { get; set; }
+        public string identificadorPaciente { get; set; }
         public Paciente paciente { get; set; }
         public string columna1 { get; set; }
         public string columna2 { get; set; }

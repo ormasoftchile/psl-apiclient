@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30501.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClient.Core", "Pasamonte.ApiClient.Core\ApiClient.Core.csproj", "{762C4DE0-CBCF-4216-9E19-5021C3251545}"
 EndProject
@@ -12,6 +12,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient", "Pasamonte.ApiClient\Pasamonte.ApiClient.csproj", "{0067EB46-86E3-487A-912C-FA1EB56D9128}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient.Tests.Gui", "Pasamonte.ApiClient.Tests.Gui\Pasamonte.ApiClient.Tests.Gui.csproj", "{E75E726D-999E-4601-90E0-70DDAB34DBD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B408E4EF-153F-4968-B65C-31C37185D78A}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.txt = Readme.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
