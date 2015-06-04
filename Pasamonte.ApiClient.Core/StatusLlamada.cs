@@ -53,9 +53,9 @@ namespace Pasamonte.ApiClient.Core
         /// </summary>
         NoExisteCodigoTerminal = 202,
         /// <summary>
-        /// No se especificó ninguna operación de actualización del arsenal.
+        /// Stock insuficiente del producto en RCE.
         /// </summary>
-        NoSeEspecificanOperaciones = 300,
+        ErrorStockInsuficiente = 300,
         /// <summary>
         /// Se especificaron más de 100 operaciones de modificación del arsenal.
         /// </summary>
@@ -83,7 +83,27 @@ namespace Pasamonte.ApiClient.Core
         /// <summary>
         /// ErrorCitaNoExiste - la cita referida por el identificador no existe.
         /// </summary>
-        ErrorCitaNoExiste = 400
+        ErrorCitaNoExiste = 400,
+        /// <summary>
+        /// TipoIdentificadorPacienteNOValido
+        /// </summary>
+        TipoIdentificadorPacienteNOValido = 114,
+        /// <summary>
+        /// IdentificadorPacienteNOValido
+        /// </summary>
+        IdentificadorPacienteNOValido = 115,
+        /// <summary>
+        /// IdentificadorDispensadorNOValido
+        /// </summary>
+        IdentificadorDispensadorNOValido = 116,
+        /// <summary>
+        /// PacienteNoEncontrado
+        /// </summary>
+        PacienteNoEncontrado = 118,
+        /// <summary>
+        /// PacienteSinDespachosPendientes
+        /// </summary>
+        PacienteSinDespachosPendientes = 119
     }
     #endregion
 }

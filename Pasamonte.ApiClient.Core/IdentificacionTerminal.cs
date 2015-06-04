@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pasamonte.ApiClient.Core.Dto
+namespace Pasamonte.ApiClient.Core
 {
     public class IdentificacionTerminal
     {
@@ -22,10 +22,6 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// </summary>
         public string CodigoEstablecimiento { get; set; }
 
-        /// <summary>
-        /// CodigoTipoTerminal - utilizado para definir que tipo de terminal realiza
-        /// una operacion.
-        /// </summary>
-        public CodigoTipoTerminal CodigoTipoTerminal { get; set; }
+        public int CodigoTipoTerminal { get; set; }
     }
 }

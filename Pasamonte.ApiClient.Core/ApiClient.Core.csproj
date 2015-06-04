@@ -46,9 +46,6 @@
     <Compile Include="CodigoTipoTerminal.cs" />
     <Compile Include="Dto\Cita.cs" />
     <Compile Include="Dto\Entrega.cs" />
-    <Compile Include="Dto\IdentificacionSistemaRemoto.cs" />
-    <Compile Include="Dto\IdentificacionTerminal.cs" />
-    <Compile Include="Dto\IdentificacionUsuario.cs" />
     <Compile Include="Dto\ItemEntrega.cs" />
     <Compile Include="Dto\Terminal.cs" />
     <Compile Include="Dto\Modulo.cs" />
@@ -83,6 +80,9 @@
     <Compile Include="Dto\Turno.cs" />
     <Compile Include="Dto\TypePacienteLight.cs" />
     <Compile Include="IApiClient.cs" />
+    <Compile Include="IdentificacionSistemaRemoto.cs" />
+    <Compile Include="IdentificacionTerminal.cs" />
+    <Compile Include="IdentificacionUsuario.cs" />
     <Compile Include="RespuestaApi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Dto\RespuestaNotificarEntrega.cs" />

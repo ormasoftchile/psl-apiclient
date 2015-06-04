@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pasamonte.ApiClient.Core.Dto
+namespace Pasamonte.ApiClient.Core
 {
     /// <summary>
     /// IdentificacionUsuario - datos de identificación de un usuario.
@@ -27,7 +27,10 @@ namespace Pasamonte.ApiClient.Core.Dto
         /// Clave - clave del usuario
         /// </summary>
         public string Clave { get; set; }
-
+        /// <summary>
+        /// Token - token de autenticacion obtenido en el sistema remoto. Utilizado para subsecuentes llamadas.
+        /// </summary>
+        public string Token { get; set; }
         /// <summary>
         /// Reset - limpia la información dejándola en defaults.
         /// </summary>

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pasamonte.ApiClient.Core.Dto
+namespace Pasamonte.ApiClient.Core
 {
     /// <summary>
     /// IdentificacionSistemaRemoto - Identifica un sistema remoto por sus atributos de empresa, software y versión.
