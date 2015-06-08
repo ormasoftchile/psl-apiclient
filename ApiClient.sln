@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{AC358594
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClient.Tests", "ApiClient.Tests\ApiClient.Tests.csproj", "{28F5F9EA-9E12-43D4-B813-10A4E2915824}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient", "Pasamonte.ApiClient\Pasamonte.ApiClient.csproj", "{0067EB46-86E3-487A-912C-FA1EB56D9128}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClient", "Pasamonte.ApiClient\ApiClient.csproj", "{0067EB46-86E3-487A-912C-FA1EB56D9128}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient.Tests.Gui", "Pasamonte.ApiClient.Tests.Gui\Pasamonte.ApiClient.Tests.Gui.csproj", "{E75E726D-999E-4601-90E0-70DDAB34DBD9}"
 EndProject
@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B408E4EF-1
 	ProjectSection(SolutionItems) = preProject
 		Readme.txt = Readme.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiClient.Core.Nuget", "Pasamonte.ApiClient.Core.Nuget\ApiClient.Core.Nuget.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pasamonte.ApiClient.Nuget", "Pasamonte.ApiClient.Nuget\Pasamonte.ApiClient.Nuget.csproj", "{21FB87A9-3256-4366-B0E0-4EB793242786}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,6 +44,14 @@ Global
 		{E75E726D-999E-4601-90E0-70DDAB34DBD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E75E726D-999E-4601-90E0-70DDAB34DBD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E75E726D-999E-4601-90E0-70DDAB34DBD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21FB87A9-3256-4366-B0E0-4EB793242786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21FB87A9-3256-4366-B0E0-4EB793242786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21FB87A9-3256-4366-B0E0-4EB793242786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21FB87A9-3256-4366-B0E0-4EB793242786}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

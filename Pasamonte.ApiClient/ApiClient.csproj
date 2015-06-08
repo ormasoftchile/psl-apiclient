@@ -38,6 +38,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Pasamonte.ApiClient.Core, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Pasamonte.ApiClient.Core.1.2.0.3\lib\Pasamonte.ApiClient.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http" />
@@ -76,17 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pasamonte.ApiClient.Core\ApiClient.Core.csproj">
-      <Project>{762c4de0-cbcf-4216-9e19-5021c3251545}</Project>
-      <Name>ApiClient.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)..\assemblies"</PostBuildEvent>
+    <PostBuildEvent>copy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)..\assemblies"
+copy "$(TargetPath)" "$(SolutionDir)Pasamonte.ApiClient.Nuget\lib"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

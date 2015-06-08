@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Pasamonte.ApiClient</id>
+    <version>1.2.0.9</version>
+    <title>Pasamonte.ApiClient</title>
+    <authors>Cristián Ormazábal</authors>
+    <owners>Pasamonte Labs</owners>
+    <description>
+      Este paquete implementa las funciones cliente de interoperabilidad de los sistemas de
+      Pasamonte Labs, mediante acceso REST.
+    </description>
+    <releaseNotes>
+    </releaseNotes>
+    <summary>
+      Implementación acceso REST para interoperabilidad Pasamonte Labs.
+    </summary>
+    <language>es-CL</language>
+    <projectUrl>https://nuget.org/packages/Pasamonte.ApiClient.Nuget</projectUrl>
+    <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://opensource.org/licenses/Apache-2.0</licenseUrl>
+    <copyright>Copyright  2015</copyright>
+    <dependencies>
+        <group targetFramework="net40">
+          <dependency id="log4net" version="1.2.13" />
+        </group>
+      <group targetFramework="net40">
+        <dependency id="Pasamonte.ApiClient.Core" version="1.2.0.2" />
+      </group>
+    </dependencies>
+    <references></references>
+    <tags>pasamonte</tags>
+  </metadata>
+  <files>
+    <file src="lib\" target="lib" />
+    <file src="tools\" target="tools" />
+    <file src="content\" target="content" />
+  </files>
+</package>
